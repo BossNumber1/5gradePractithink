@@ -37,7 +37,6 @@
     left: calc(50% - 314px / 2);
     width: 314px;
     height: 280px;
-    border: 1px solid;
 }
 
 .figure19 {
@@ -50,11 +49,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 43px;
+    top: -10px;
     left: calc(50% - 97px / 2);
     width: 97px;
     height: 30px;
-    /* border: 1px solid red; */
 }
 
 .input19 input {
