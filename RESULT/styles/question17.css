@@ -37,94 +37,50 @@
     left: calc(50% - 462px / 2);
     width: 462px;
     height: 130px;
-    border: 1px solid;
 }
 
-.content17 input {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 41.18px;
-    height: 30px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-/* fractions styles */
-
-.fractions17 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 20px;
-    left: calc(50% - 231.29px / 2);
-    width: 231.29px;
-    height: 70.31px;
-}
-
-.fraction17 {
-    width: 41.29px;
-    height: 70.31px;
-}
-
-.devil17 {
-    text-align: center;
-    margin-top: -13px;
-}
-
-#firstEmpty17 {
+.place17 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 6px 16px;
-    width: 54px;
-    height: 30px;
-    background: #f4f4f4;
-    border: 1px solid #d0d0d0;
+    width: 90px;
+    height: 45px;
+    background: rgba(54, 156, 183, 0.3);
+    border: 1px solid #369cb7;
     box-sizing: border-box;
     border-radius: 5px;
+    margin: 0px 35px;
 }
 
-/* btns styles */
-
-.btns17 {
-    top: 67px;
-    left: calc(50% - 222px / 2);
-    width: 222px;
-    height: 30px;
+.topRow17 {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#firstBtn17,
-#secondBtn17,
-#thirdBtn17 {
+.bottomRow17 {
+    top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 462px;
+    height: 45px;
+}
+
+.bottomRow17 div {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 6px 16px;
-    width: 54px;
-    height: 30px;
+    width: 90px;
+    height: 45px;
     background: #369cb7;
     border: 1px solid #369cb7;
     box-sizing: border-box;
     border-radius: 5px;
     color: white;
     cursor: grab;
-
-    /* below text styles */
-
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 18px;
-    text-align: center;
-    color: #ffffff;
-    margin: 0px 10px;
 }
