@@ -39,69 +39,72 @@
     left: calc(50% - 339px / 2);
     width: 339px;
     height: 265px;
-    border: 1px solid;
-}
-
-.figures15 {
-    width: 1078.69px;
-    height: 171.83px;
-}
-
-/* places styles */
-
-.places15 {
-    top: 50px;
-    left: calc(50% - 1013px / 2);
-    width: 1013px;
-    height: 45px;
+    /* border: 1px solid; */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.places15 div:not(.statusMiniIcon) {
+.leftColumn15,
+.rightColumn15 {
+    width: 170px;
+    height: 265px;
+}
+
+/* rows styles */
+
+.first1row15,
+.second1row15,
+.third1row15,
+.fourth1row15,
+.fifth1row15,
+.sixth1row15,
+.first2row15,
+.second2row15,
+.third2row15,
+.fourth2row15,
+.fifth2row15,
+.sixth2row15 {
+    border: 1px solid #0995e3;
+    width: 170px;
+    height: 45px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.first1row15,
+.first2row15 {
+    background-color: #abe9ff;
+}
+
+.second1row15,
+.third1row15,
+.fourth1row15,
+.fifth1row15,
+.sixth1row15,
+.second2row15,
+.third2row15,
+.fourth2row15,
+.fifth2row15,
+.sixth2row15 {
+    background-color: #fff;
+}
+
+.content15 input {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 6px 16px;
-    width: 108px;
-    height: 45px;
-    background: #369cb7;
-    opacity: 0.3;
-    border: 1px solid #369cb7;
+    width: 40px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid #0995e3;
     box-sizing: border-box;
     border-radius: 5px;
-}
-
-/* btns styles */
-
-.btns15 {
-    top: 100px;
-    left: calc(50% - 552px / 2);
-    width: 552px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.btns15 div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
-    width: 108px;
-    height: 45px;
-    background: #369cb7;
-    border: 1px solid #369cb7;
-    box-sizing: border-box;
-    border-radius: 5px;
-    cursor: grab;
-    color: white;
-}
-
-.btns15 div:not(:last-child) {
-    margin-right: 20px;
+    text-align: center;
 }
