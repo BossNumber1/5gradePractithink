@@ -34,12 +34,9 @@
 
 .content6 {
     top: 100px;
-    left: calc(50% - 370px / 2);
-    width: 370px;
-    height: 204px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    left: calc(50% - 182px / 2);
+    width: 182px;
+    height: 209px;
     border: 1px solid;
 }
 

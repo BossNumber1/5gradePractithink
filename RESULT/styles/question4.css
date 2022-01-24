@@ -33,13 +33,10 @@
 /* content styles */
 
 .content4 {
-    top: 90px;
-    left: calc(50% - 339px / 2);
-    width: 339px;
-    height: 265px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    top: 126px;
+    left: calc(50% - 870px / 2);
+    width: 870px;
+    height: 329px;
     border: 1px solid;
 }
 

@@ -32,10 +32,10 @@
 /* content styles */
 
 .content13 {
-    top: 100px;
-    left: calc(50% - 453.6px / 2);
-    width: 453.6px;
-    height: 139px;
+    top: 136px;
+    left: calc(50% - 520px / 2);
+    width: 520px;
+    height: 194px;
     display: flex;
     align-items: center;
     justify-content: space-between;
