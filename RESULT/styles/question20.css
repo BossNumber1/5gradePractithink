@@ -37,42 +37,19 @@
     left: calc(50% - 395px / 2);
     width: 395px;
     height: 140.46px;
-    border: 1px solid;
 }
 
-.figure20 {
-    left: calc(50% - 311px / 2);
-    width: 311px;
-    height: 260px;
-}
-
-.input20 {
+.content20 div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    top: 43px;
-    left: calc(50% - 97px / 2);
-    width: 97px;
-    height: 30px;
-    /* border: 1px solid red; */
+    justify-content: flex-start;
+    margin-bottom: 25px;
 }
 
-.input20 input {
-    display: flex;
-    padding: 6px 16px;
-    width: 64px;
-    height: 30px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
+.content20 input {
+    width: 57px;
+    height: 30.15px;
+    border: 1px solid;
     border-radius: 5px;
-    text-align: center;
-}
-
-.input20:not(input) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: #2f2f2f;
     text-align: center;
 }
