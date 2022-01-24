@@ -68,15 +68,3 @@
     box-sizing: border-box;
     text-align: center;
 }
-
-.top1row11,
-.center1row11,
-.bottom1row11,
-.top2row11,
-.center2row11,
-.bottom2row11 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 18px;
-}

@@ -43,40 +43,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid;
 }
 
-.fraction8 {
-    width: 41.29px;
-    height: 70.31px;
+.leftColumn8,
+.rightColumn8 {
+    width: 155px;
+    height: 194px;
+}
+
+.leftColumn8 div,
+.rightColumn8 div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
 }
 
 .content8 input {
+    width: 40px;
+    height: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 6px 16px;
-    width: 41.18px;
-    height: 30px;
     border: 1px solid #2f2f2f;
-    box-sizing: border-box;
     border-radius: 5px;
-    transform: rotate(-0.21deg);
-    margin-bottom: 5px;
+    box-sizing: border-box;
     text-align: center;
-}
-
-.devil8 {
-    text-align: center;
-    margin-top: -13px;
-}
-
-.sign8 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 18px;
-    text-align: center;
-    color: #000000;
 }
