@@ -37,97 +37,16 @@
     left: 70px;
     width: 754px;
     height: 376px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content5 input {
+    width: 57px;
+    height: 30.15px;
     border: 1px solid;
-}
-
-/* expressions styles */
-
-.expressions5 {
-    left: calc(50% - 497px / 2);
-    width: 497px;
-    height: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.leftColumn5,
-.rightColumn5 {
-    width: 191px;
-    height: 240px;
-}
-
-/* row styles */
-
-.first1row5,
-.second1row5,
-.third1row5,
-.fourth1row5,
-.first2row5,
-.second2row5,
-.third2row5,
-.fourth2row5 {
-    width: 201px;
-    height: 45px;
-    margin-bottom: 17.5px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    text-align: right;
-}
-
-.first1row5 div:not(.statusMiniIcon),
-.second1row5 div:not(.statusMiniIcon),
-.third1row5 div:not(.statusMiniIcon),
-.fourth1row5 div:not(.statusMiniIcon),
-.first2row5 div:not(.statusMiniIcon),
-.second2row5 div:not(.statusMiniIcon),
-.third2row5 div:not(.statusMiniIcon),
-.fourth2row5 div:not(.statusMiniIcon) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
-    position: static;
-    width: 70px;
-    height: 45px;
-    background: #369cb7;
-    opacity: 0.3;
-    border: 1px solid #369cb7;
-    box-sizing: border-box;
     border-radius: 5px;
-    margin: 0px 15px;
-}
-
-/* btns styles */
-
-.btns5 {
-    top: 27px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 770px;
-    height: 45px;
-}
-
-.btns5 div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
-    position: static;
-    width: 70px;
-    height: 45px;
-    background: #369cb7;
-    border: 1px solid #369cb7;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: white;
-    cursor: grab;
-}
-
-.btns5 div:not(:last-child) {
-    margin-right: 30px;
+    text-align: center;
+    margin: 0px 5px;
 }
