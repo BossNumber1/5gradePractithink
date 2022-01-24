@@ -39,73 +39,26 @@
     left: calc(50% - 628px / 2);
     width: 628px;
     height: 85.31px;
-    border: 1px solid;
 }
 
-.triangle18 {
-    left: calc(50% - 537px / 2);
-    width: 537px;
-    height: 310px;
-}
-
-/* angles styles */
-
-.angles18 {
-    top: 33px;
-    width: 572px;
-    height: 40px;
+.content18 input {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.angles18 div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.angles18 input {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 91px;
-    height: 40px;
-    border: 1px solid #369cb7;
+    padding: 6px 16px;
+    width: 56.85px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-left: 10px;
-    text-align: center;
+    margin: 0 10px;
 }
 
-/* protractor styles */
-
-.protractor18 {
-    position: absolute;
-    top: 118px;
-    left: 320px;
-}
-
-.imgRuler {
-    cursor: grab;
-}
-
-.leftEdge,
-.rightEdge {
+.topRow18,
+.bottomRow18 {
     display: flex;
-    width: 50px;
-    height: 57px;
-    position: absolute;
-    cursor: pointer;
-    top: 150px;
-}
-
-.leftEdge {
-    z-index: 1;
-}
-
-.rightEdge {
-    left: 86.5%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 23px;
 }
