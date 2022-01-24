@@ -39,29 +39,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid;
 }
 
 .leftColumn13,
 .rightColumn13 {
-    width: 182.6px;
-    height: 139px;
+    width: 210px;
+    height: 194px;
 }
 
-.top1row13,
-.top2row13,
-.bottom1row13,
-.bottom2row13 {
-    width: 182.6px;
-    height: 48px;
+.leftColumn13 div,
+.rightColumn13 div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.bottom1row13,
-.bottom2row13 {
-    margin-top: 41px;
+    margin-bottom: 25px;
 }
 
 .content13 input {
@@ -70,6 +61,6 @@
     border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-right: 13px;
+    margin-left: 10px;
     text-align: center;
 }
