@@ -23,10 +23,10 @@
 }
 
 .lineUnderHeading5 {
+    top: 120px;
     position: absolute;
     width: 1169px;
     height: 0px;
-    top: 70px;
     border-bottom: 1px solid #a8a8a8;
 }
 
