@@ -37,32 +37,39 @@
     left: calc(50% - 182px / 2);
     width: 182px;
     height: 209px;
-    border: 1px solid;
 }
 
-.leftColumn6,
-.rightColumn6 {
-    width: 155px;
-    height: 204px;
+.figure6 {
+    width: 182px;
+    height: 149px;
 }
 
-.top1row6,
-.center1row6,
-.bottom1row6,
-.top2row6,
-.center2row6,
-.bottom2row6 {
+.input6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
+    top: 28px;
+    left: calc(50% - 97px / 2);
+    width: 97px;
+    height: 30px;
 }
 
-.content6 input {
-    width: 57px;
-    height: 30.15px;
-    border: 1px solid;
+.input6 input {
+    display: flex;
+    padding: 6px 16px;
+    width: 64px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
     border-radius: 5px;
-    margin-left: 10px;
+    text-align: center;
+}
+
+.input6:not(input) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #2f2f2f;
     text-align: center;
 }
