@@ -37,6 +37,7 @@
     left: calc(50% - 629px / 2);
     width: 629px;
     height: 110px;
+    border: 1px solid;
 }
 
 .topRow2,

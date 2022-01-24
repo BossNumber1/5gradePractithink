@@ -37,6 +37,7 @@
     left: calc(50% - 392px / 2);
     width: 392px;
     height: 237px;
+    border: 1px solid;
 }
 
 .figures9 {

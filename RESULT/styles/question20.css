@@ -37,6 +37,7 @@
     left: calc(50% - 311px / 2);
     width: 311px;
     height: 335.5px;
+    border: 1px solid;
 }
 
 .figure20 {

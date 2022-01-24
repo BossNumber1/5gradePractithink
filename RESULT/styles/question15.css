@@ -39,6 +39,7 @@
     left: calc(50% - 1078.69px / 2);
     width: 1078.69px;
     height: 303.5px;
+    border: 1px solid;
 }
 
 .figures15 {

@@ -37,6 +37,7 @@
     left: calc(50% - 391px / 2);
     width: 391px;
     height: 230px;
+    border: 1px solid;
 }
 
 .figures3 {

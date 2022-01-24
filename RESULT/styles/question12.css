@@ -37,6 +37,7 @@
     left: calc(50% - 550px / 2);
     width: 550px;
     height: 230px;
+    border: 1px solid;
 }
 
 .figures12 {

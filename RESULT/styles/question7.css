@@ -37,6 +37,7 @@
     left: calc(50% - 324px / 2);
     width: 324px;
     height: 304px;
+    border: 1px solid;
 }
 
 .content7 input {

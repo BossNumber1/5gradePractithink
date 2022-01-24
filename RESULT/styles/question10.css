@@ -39,6 +39,7 @@
     left: calc(50% - 430px / 2);
     width: 430px;
     height: 268.32px;
+    border: 1px solid;
 }
 
 .inputs10 {
