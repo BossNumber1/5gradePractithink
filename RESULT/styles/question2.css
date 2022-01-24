@@ -37,30 +37,39 @@
     left: calc(50% - 351.69px / 2);
     width: 351.69px;
     height: 276px;
-    border: 1px solid;
 }
 
-.topRow2,
-.centerRow2,
-.bottomRow2 {
-    width: 629px;
-    height: 30px;
-    margin-bottom: 7px;
+.figure2 {
+    width: 182px;
+    height: 149px;
+}
+
+.input2 {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-}
-
-.topRow2 div,
-.centerRow2 div,
-.bottomRow2 div {
-    margin-right: 10px;
-}
-
-.content2 input {
-    width: 40px;
+    justify-content: space-between;
+    top: 100px;
+    left: calc(50% - 246px / 2);
+    width: 246px;
     height: 30px;
+}
+
+.input2 input {
+    display: flex;
+    padding: 6px 16px;
+    width: 64px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
     border-radius: 5px;
     text-align: center;
-    border: 1px solid;
+}
+
+.input2:not(input) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #2f2f2f;
+    text-align: center;
 }
