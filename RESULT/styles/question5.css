@@ -1,0 +1,132 @@
+.app5 {
+    width: 1170px;
+    height: 557px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage5 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading5 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 70px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content5 {
+    top: 92px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 315px;
+}
+
+/* expressions styles */
+
+.expressions5 {
+    left: calc(50% - 497px / 2);
+    width: 497px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftColumn5,
+.rightColumn5 {
+    width: 191px;
+    height: 240px;
+}
+
+/* row styles */
+
+.first1row5,
+.second1row5,
+.third1row5,
+.fourth1row5,
+.first2row5,
+.second2row5,
+.third2row5,
+.fourth2row5 {
+    width: 201px;
+    height: 45px;
+    margin-bottom: 17.5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: right;
+}
+
+.first1row5 div:not(.statusMiniIcon),
+.second1row5 div:not(.statusMiniIcon),
+.third1row5 div:not(.statusMiniIcon),
+.fourth1row5 div:not(.statusMiniIcon),
+.first2row5 div:not(.statusMiniIcon),
+.second2row5 div:not(.statusMiniIcon),
+.third2row5 div:not(.statusMiniIcon),
+.fourth2row5 div:not(.statusMiniIcon) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 70px;
+    height: 45px;
+    background: #369cb7;
+    opacity: 0.3;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0px 15px;
+}
+
+/* btns styles */
+
+.btns5 {
+    top: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 770px;
+    height: 45px;
+}
+
+.btns5 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 70px;
+    height: 45px;
+    background: #369cb7;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    cursor: grab;
+}
+
+.btns5 div:not(:last-child) {
+    margin-right: 30px;
+}

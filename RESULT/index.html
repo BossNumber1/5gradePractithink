@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TOTAL | 4 CLASS</title>
+        <script
+            type="text/javascript"
+            src="./propeller/src/propeller.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+        />
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="./common.css" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="question1">
+                <div class="nameTask">Question 1</div>
+                <div class="app1">
+                    <div class="titlePage1">Solve the equations:</div>
+                    <div class="lineUnderHeading1"></div>
+                    <div class="content1">
+                        <div class="firstBlock1">
+                            <div>x + 645 = 987</div>
+                            <div class="content1input">
+                                x =<input type="text" id="firstNumber1" />
+                            </div>
+                        </div>
+                        <div class="secondBlock1">
+                            <div>7 x z = 119</div>
+                            <div class="content1input">
+                                z =<input type="text" id="secondNumber1" />
+                            </div>
+                        </div>
+                        <div class="thirdBlock1">
+                            <div>m - 116 = 145</div>
+                            <div class="content1input">
+                                m =<input type="text" id="thirdNumber1" />
+                            </div>
+                        </div>
+                        <div class="fourthBlock1">
+                            <div>65 ÷ t = 13</div>
+                            <div class="content1input">
+                                t =<input type="text" id="fourthNumber1" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question2">
+                <div class="nameTask">Question 2</div>
+                <div class="app2">
+                    <div class="titlePage2">
+                        80 lb of pineapples and 4 times as more oranges were
+                        delivered to the store. Answer the questions below.
+                    </div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Lb stands for pounds
+                    </div>
+                    <div class="lineUnderHeading2"></div>
+                    <div class="content2">
+                        <div class="topRow2">
+                            <div>
+                                How many lb of oranges were delivered to the
+                                store?
+                            </div>
+                            <div>
+                                <input type="text" id="firstNumber2" />
+                            </div>
+                            <div>lb</div>
+                        </div>
+                        <div class="centerRow2">
+                            <div>
+                                How many more lb of oranges were delivered than
+                                pineapples?
+                            </div>
+                            <div><input type="text" id="secondNumber2" /></div>
+                            <div>lb</div>
+                        </div>
+                        <div class="bottomRow2">
+                            <div>
+                                How many lb of fruits were delivered in total?
+                            </div>
+                            <div><input type="text" id="thirdNumber2" /></div>
+                            <div>lb</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question3">
+                <div class="nameTask">Question 3</div>
+                <div class="app3">
+                    <div class="titlePage3">
+                        Use the model to multiply 2 by 26.
+                    </div>
+                    <div class="subtitle3">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Find the areas of rectangles and add them up
+                    </div>
+                    <div class="lineUnderHeading3"></div>
+                    <div class="content3">
+                        <div class="figures3">
+                            <img
+                                src="./pictures/3que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="expression3">
+                            2 x 26 =
+                            <input type="text" id="firstNumber3" />
+                        </div>
+                        <div class="inputs3">
+                            <div>
+                                <input type="text" id="secondNumber3" />
+                            </div>
+                            <div>
+                                <input type="text" id="thirdNumber3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question4">
+                <div class="nameTask">Question 4</div>
+                <div class="app4">
+                    <div class="titlePage4">Complete the table.</div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Multiply by 4.
+                    </div>
+                    <div class="lineUnderHeading4"></div>
+                    <div class="content4">
+                        <div class="leftColumn4">
+                            <div class="first1row4">In</div>
+                            <div class="second1row4">1</div>
+                            <div class="third1row4">3</div>
+                            <div class="fourth1row4">7</div>
+                            <div class="fifth1row4">10</div>
+                            <div class="sixth1row4">11</div>
+                        </div>
+                        <div class="rightColumn4">
+                            <div class="first2row4">Out</div>
+                            <div class="second2row4">4</div>
+                            <div class="third2row4">
+                                <input type="text" id="firstNumber4" />
+                            </div>
+                            <div class="fourth2row4">
+                                <input type="text" id="secondNumber4" />
+                            </div>
+                            <div class="fifth2row4">
+                                <input type="text" id="thirdNumber4" />
+                            </div>
+                            <div class="sixth2row4">
+                                <input type="text" id="fourthNumber4" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question5">
+                <div class="nameTask">Question 5</div>
+                <div class="app5">
+                    <div class="titlePage5">
+                        Connect the answers to the math sentences.
+                    </div>
+                    <div class="lineUnderHeading5"></div>
+                    <div class="content5">
+                        <div class="expressions5">
+                            <div class="leftColumn5">
+                                <div class="first1row5">
+                                    2 x 10 x 13 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="firstEmpty5"
+                                    ></div>
+                                </div>
+                                <div class="second1row5">
+                                    32 x 13 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="secondEmpty5"
+                                    ></div>
+                                </div>
+                                <div class="third1row5">
+                                    124 x 12 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="thirdEmpty5"
+                                    ></div>
+                                </div>
+                                <div class="fourth1row5">
+                                    3 x 11 x 4 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="fourthEmpty5"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="rightColumn5">
+                                <div class="first2row5">
+                                    744 ÷ 4 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="fifthEmpty5"
+                                    ></div>
+                                </div>
+                                <div class="second2row5">
+                                    875 ÷ 5 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="sixthEmpty5"
+                                    ></div>
+                                </div>
+                                <div class="third2row5">
+                                    688 ÷ 4 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="seventhEmpty5"
+                                    ></div>
+                                </div>
+                                <div class="fourth2row5">
+                                    651 ÷ 3 =
+                                    <div
+                                        ondragstart="drag5(event)"
+                                        ondrop="drop5(event)"
+                                        ondragover="allowDrop(event)"
+                                        draggable="true"
+                                        id="eighthEmpty5"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns5">
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn5"
+                            >
+                                416
+                            </div>
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn5"
+                            >
+                                217
+                            </div>
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn5"
+                            >
+                                175
+                            </div>
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthBtn5"
+                            >
+                                260
+                            </div>
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fifthBtn5"
+                            >
+                                186
+                            </div>
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="sixthBtn5"
+                            >
+                                172
+                            </div>
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="seventhBtn5"
+                            >
+                                1488
+                            </div>
+                            <div
+                                ondragstart="drag5(event)"
+                                ondrop="drop5(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="eighthBtn5"
+                            >
+                                132
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question6">
+                <div class="nameTask">Question 6</div>
+                <div class="app6">
+                    <div class="titlePage6">Add and subtract fractions.</div>
+                    <div class="subtitle6">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Use the slash key “ / “ for fractions.
+                    </div>
+                    <div class="lineUnderHeading6"></div>
+                    <div class="content6">
+                        <div class="leftColumn6">
+                            <div class="top1row6">
+                                <img
+                                    src="./pictures/6que/top1row6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="firstNumber6" />
+                            </div>
+                            <div class="center1row6">
+                                <img
+                                    src="./pictures/6que/center1row6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="secondNumber6" />
+                            </div>
+                            <div class="bottom1row6">
+                                <img
+                                    src="./pictures/6que/bottom1row6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="thirdNumber6" />
+                            </div>
+                        </div>
+                        <div class="rightColumn6">
+                            <div class="top2row6">
+                                <img
+                                    src="./pictures/6que/top2row6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fourthNumber6" />
+                            </div>
+                            <div class="center2row6">
+                                <img
+                                    src="./pictures/6que/center2row6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fifthNumber6" />
+                            </div>
+                            <div class="bottom2row6">
+                                <img
+                                    src="./pictures/6que/bottom2row6.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="sixthNumber6" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question7">
+                <div class="nameTask">Question 7</div>
+                <div class="app7">
+                    <div class="titlePage7">
+                        Write fractions representing the pictures and compare
+                        them.
+                    </div>
+                    <div class="lineUnderHeading7"></div>
+                    <div class="content7">
+                        <div class="figures7">
+                            <img
+                                src="./pictures/7que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="fractions7">
+                            <div class="fraction7">
+                                <div>
+                                    <input type="text" id="firstNumber7" />
+                                </div>
+                                <div class="devil7">
+                                    <img
+                                        src="./pictures/devil.svg"
+                                        alt="devil"
+                                    />
+                                </div>
+                                <div>
+                                    <input type="text" id="secondNumber7" />
+                                </div>
+                            </div>
+                            <div
+                                ondragstart="drag7(event)"
+                                ondrop="drop7(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="firstEmpty7"
+                                id="firstEmpty7"
+                            ></div>
+                            <div class="fraction7">
+                                <div>
+                                    <input type="text" id="thirdNumber7" />
+                                </div>
+                                <div class="devil7">
+                                    <img
+                                        src="./pictures/devil.svg"
+                                        alt="devil"
+                                    />
+                                </div>
+                                <div>
+                                    <input type="text" id="fourthNumber7" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns7">
+                            <div
+                                ondragstart="drag7(event)"
+                                ondrop="drop7(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn7"
+                            >
+                                <
+                            </div>
+                            <div
+                                ondragstart="drag7(event)"
+                                ondrop="drop7(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn7"
+                            >
+                                =
+                            </div>
+                            <div
+                                ondragstart="drag7(event)"
+                                ondrop="drop7(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn7"
+                            >
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question8">
+                <div class="nameTask">Question 8</div>
+                <div class="app8">
+                    <div class="titlePage8">
+                        There were eight slices of pizza. If Sam had three,
+                        Andrew one, and Ann two slices,
+                        <br />
+                        what part of pizza did they eat?
+                    </div>
+                    <div class="subtitle8">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Write the answer as a fraction in the lowest term.
+                    </div>
+                    <div class="lineUnderHeading8"></div>
+                    <div class="content8">
+                        <div class="fraction8">
+                            <div><input type="text" id="firstNumber8" /></div>
+                            <div class="devil8">
+                                <img src="./pictures/devil.svg" alt="devil" />
+                            </div>
+                            <div><input type="text" id="secondNumber8" /></div>
+                        </div>
+                        <div class="sign8">+</div>
+                        <div class="fraction8">
+                            <div><input type="text" id="thirdNumber8" /></div>
+                            <div class="devil8">
+                                <img src="./pictures/devil.svg" alt="devil" />
+                            </div>
+                            <div><input type="text" id="fourthNumber8" /></div>
+                        </div>
+                        <div class="sign8">+</div>
+                        <div class="fraction8">
+                            <div><input type="text" id="fifthNumber8" /></div>
+                            <div class="devil8">
+                                <img src="./pictures/devil.svg" alt="devil" />
+                            </div>
+                            <div><input type="text" id="sixthNumber8" /></div>
+                        </div>
+                        <div class="sign8">=</div>
+                        <div class="fraction8">
+                            <div><input type="text" id="seventhNumber8" /></div>
+                            <div class="devil8">
+                                <img src="./pictures/devil.svg" alt="devil" />
+                            </div>
+                            <div><input type="text" id="eighthNumber8" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question9">
+                <div class="nameTask">Question 9</div>
+                <div class="app9">
+                    <div class="titlePage9">
+                        Use the model to find the result of 654 ÷ 6.
+                    </div>
+                    <div class="subtitle9">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Find the missing sides of rectangles and add them up.
+                    </div>
+                    <div class="lineUnderHeading9"></div>
+                    <div class="content9">
+                        <div class="figures9">
+                            <img
+                                src="./pictures/9que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="expression9">
+                            654 ÷ 6 =
+                            <input type="text" id="firstNumber9" />
+                        </div>
+                        <div class="inputs9">
+                            <div>
+                                <input type="text" id="secondNumber9" />
+                            </div>
+                            <div>
+                                <input type="text" id="thirdNumber9" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question10">
+                <div class="nameTask">Question 10</div>
+                <div class="app10">
+                    <div class="titlePage10">
+                        Drag and drop two numbers to make the statement true.
+                    </div>
+                    <div class="lineUnderHeading10"></div>
+                    <div class="content10">
+                        <div class="inputs10">
+                            <div
+                                ondragstart="drag10(event)"
+                                ondrop="drop10(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="firstInput10"
+                                id="firstEmpty10"
+                            ></div>
+                            and
+                            <div
+                                ondragstart="drag10(event)"
+                                ondrop="drop10(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="secondInput10"
+                                id="secondEmpty10"
+                            ></div>
+                            have a quotient of
+                            <p class="dedicated10">5</p>
+                        </div>
+                        <div class="btns10">
+                            <div
+                                ondragstart="drag10(event)"
+                                ondrop="drop10(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn10"
+                            >
+                                9
+                            </div>
+                            <div
+                                ondragstart="drag10(event)"
+                                ondrop="drop10(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn10"
+                            >
+                                45
+                            </div>
+                            <div
+                                ondragstart="drag10(event)"
+                                ondrop="drop10(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn10"
+                            >
+                                55
+                            </div>
+                            <div
+                                ondragstart="drag10(event)"
+                                ondrop="drop10(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthBtn10"
+                            >
+                                67
+                            </div>
+                            <div
+                                ondragstart="drag10(event)"
+                                ondrop="drop10(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fifthBtn10"
+                            >
+                                5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question11">
+                <div class="nameTask">Question 11</div>
+                <div class="app11">
+                    <div class="titlePage11">Сomplete the math sentences.</div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Remain the cell empty if the quotient is the whole
+                        number.
+                    </div>
+                    <div class="lineUnderHeading11"></div>
+                    <div class="content11">
+                        <div class="leftColumn11">
+                            <div class="top1row11">
+                                15 ÷ 6 =
+                                <input
+                                    type="text"
+                                    id="block1part1firstNumber11"
+                                />R
+                                <input
+                                    type="text"
+                                    id="block1part2firstNumber11"
+                                />
+                            </div>
+                            <div class="center1row11">
+                                20 ÷ 7 =
+                                <input
+                                    type="text"
+                                    id="block1part1secondNumber11"
+                                />R
+                                <input
+                                    type="text"
+                                    id="block1part2secondNumber11"
+                                />
+                            </div>
+                            <div class="bottom1row11">
+                                34 ÷ 8 =
+                                <input
+                                    type="text"
+                                    id="block1part1thirdNumber11"
+                                />R
+                                <input
+                                    type="text"
+                                    id="block1part2thirdNumber11"
+                                />
+                            </div>
+                        </div>
+                        <div class="rightColumn11">
+                            <div class="top2row11">
+                                15 ÷ 4 =
+                                <input
+                                    type="text"
+                                    id="block2part1firstNumber11"
+                                />R
+                                <input
+                                    type="text"
+                                    id="block2part2firstNumber11"
+                                />
+                            </div>
+                            <div class="center2row11">
+                                23 ÷ 5 =
+                                <input
+                                    type="text"
+                                    id="block2part1secondNumber11"
+                                />R
+                                <input
+                                    type="text"
+                                    id="block2part2secondNumber11"
+                                />
+                            </div>
+                            <div class="bottom2row11">
+                                18 ÷ 8 =
+                                <input
+                                    type="text"
+                                    id="block2part1thirdNumber11"
+                                />R
+                                <input
+                                    type="text"
+                                    id="block2part2thirdNumber11"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question12">
+                <div class="nameTask">Question 12</div>
+                <div class="app12">
+                    <div class="titlePage12">
+                        Use the model to find the product of multiplication
+                        sentence 5 x 243.
+                    </div>
+                    <div class="subtitle12">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Find the areas of rectangles and add them up.
+                    </div>
+                    <div class="lineUnderHeading12"></div>
+                    <div class="content12">
+                        <div class="figures12">
+                            <img
+                                src="./pictures/12que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="expression12">
+                            5 x 243 =
+                            <input type="text" id="firstNumber12" />
+                        </div>
+                        <div class="inputs12">
+                            <div>
+                                <input type="text" id="secondNumber12" />
+                            </div>
+                            <div>
+                                <input type="text" id="thirdNumber12" />
+                            </div>
+                            <div>
+                                <input type="text" id="fourthNumber12" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question13">
+                <div class="nameTask">Question 13</div>
+                <div class="app13">
+                    <div class="titlePage13">
+                        Multiply mixed numbers by whole numbers.
+                    </div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Use the slash key “ / “ for fractions.
+                    </div>
+                    <div class="lineUnderHeading13"></div>
+                    <div class="content13">
+                        <div class="leftColumn13">
+                            <div class="top1row13">
+                                <img
+                                    src="./pictures/13que/top1row13.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="firstNumber13" />
+                            </div>
+                            <div class="bottom1row13">
+                                <img
+                                    src="./pictures/13que/bottom1row13.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="secondNumber13" />
+                            </div>
+                        </div>
+                        <div class="rightColumn13">
+                            <div class="top2row13">
+                                <img
+                                    src="./pictures/13que/top2row13.svg"
+                                    alt="expression"
+                                /><input type="text" id="thirdNumber13" />
+                            </div>
+                            <div class="bottom2row13">
+                                <img
+                                    src="./pictures/13que/bottom2row13.svg"
+                                    alt="expression"
+                                />
+                                <input type="text" id="fourthNumber13" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question14">
+                <div class="nameTask">Question 14</div>
+                <div class="app14">
+                    <div class="titlePage14">
+                        Alex rode his bike 2⁄5 of a mile in a minute. How many
+                        miles will he ride in 30 minutes?
+                        <br />
+                        Write the answer as a whole number.
+                    </div>
+                    <div class="subtitle14">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Use the slash key “ / “ for fractions.
+                    </div>
+                    <div class="lineUnderHeading14"></div>
+                    <div class="content14">
+                        <div><input type="text" id="firstNumber14" /></div>
+                        <div>x</div>
+                        <div><input type="text" id="secondNumber14" /></div>
+                        <div>=</div>
+                        <div><input type="text" id="thirdNumber14" /></div>
+                        <div>=</div>
+                        <div><input type="text" id="fourthNumber14" /></div>
+                        <div class="text14">Miles</div>
+                    </div>
+                </div>
+            </div>
+            <div class="question15">
+                <div class="nameTask">Question 15</div>
+                <div class="app15">
+                    <div class="titlePage15">Identify the types of angles.</div>
+                    <div class="lineUnderHeading15"></div>
+                    <div class="content15">
+                        <div class="figures15">
+                            <img
+                                src="./pictures/15que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="places15">
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="firstPlace15"
+                                id="firstEmpty15"
+                            ></div>
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="secondPlace15"
+                                id="secondEmpty15"
+                            ></div>
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="thirdPlace15"
+                                id="thirdEmpty15"
+                            ></div>
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="fourthPlace15"
+                                id="fourthEmpty15"
+                            ></div>
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="fifthPlace15"
+                                id="fifthEmpty15"
+                            ></div>
+                        </div>
+                        <div class="btns15">
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn15"
+                            >
+                                straight
+                            </div>
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn15"
+                            >
+                                obtuse
+                            </div>
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn15"
+                            >
+                                right
+                            </div>
+                            <div
+                                ondragstart="drag15(event)"
+                                ondrop="drop15(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthBtn15"
+                            >
+                                acute
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question16">
+                <div class="nameTask">Question 16</div>
+                <div class="app16">
+                    <div class="titlePage16">
+                        Use the model to find 23 x 36.
+                    </div>
+                    <div class="subtitle16">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Find the areas of rectangles and add them up
+                    </div>
+                    <div class="lineUnderHeading16"></div>
+                    <div class="content16">
+                        <div class="figures16">
+                            <img
+                                src="./pictures/16que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="expression16">
+                            23 x 36 =
+                            <input type="text" id="firstNumber16" />
+                        </div>
+                        <div class="inputs16">
+                            <div>
+                                <input type="text" id="secondNumber16" />
+                            </div>
+                            <div>
+                                <input type="text" id="thirdNumber16" />
+                            </div>
+                            <div>
+                                <input type="text" id="fourthNumber16" />
+                            </div>
+                            <div>
+                                <input type="text" id="fifthNumber16" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question17">
+                <div class="nameTask">Question 17</div>
+                <div class="app17">
+                    <div class="titlePage17">
+                        Write fractions representing the pictures and compare
+                        them.
+                    </div>
+                    <div class="lineUnderHeading17"></div>
+                    <div class="content17">
+                        <div class="figures17">
+                            <img
+                                src="./pictures/17que/figures.svg"
+                                alt="figures"
+                            />
+                        </div>
+                        <div class="fractions17">
+                            <div class="fraction17">
+                                <div>
+                                    <input type="text" id="firstNumber17" />
+                                </div>
+                                <div class="devil17">
+                                    <img
+                                        src="./pictures/devil.svg"
+                                        alt="devil"
+                                    />
+                                </div>
+                                <div>
+                                    <input type="text" id="secondNumber17" />
+                                </div>
+                            </div>
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                class="firstEmpty17"
+                                id="firstEmpty17"
+                            ></div>
+                            <div class="fraction17">
+                                <div>
+                                    <input type="text" id="thirdNumber17" />
+                                </div>
+                                <div class="devil17">
+                                    <img
+                                        src="./pictures/devil.svg"
+                                        alt="devil"
+                                    />
+                                </div>
+                                <div>
+                                    <input type="text" id="fourthNumber17" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns17">
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn17"
+                            >
+                                <
+                            </div>
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn17"
+                            >
+                                =
+                            </div>
+                            <div
+                                ondragstart="drag17(event)"
+                                ondrop="drop17(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn17"
+                            >
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question18">
+                <div class="nameTask">Question 18</div>
+                <div class="app18">
+                    <div class="titlePage18">
+                        Measure the angles and write the answers.
+                    </div>
+                    <div class="lineUnderHeading18"></div>
+                    <div class="content18">
+                        <div class="triangle18">
+                            <img
+                                src="./pictures/18que/triangle.svg"
+                                alt="triangle"
+                            />
+                        </div>
+                        <div class="angles18">
+                            <div>
+                                <img
+                                    src="./pictures/18que/firstAngle.svg"
+                                    alt="BAC"
+                                />
+                                <div>
+                                    <input type="text" id="firstNumber18" />
+                                </div>
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/18que/secondAngle.svg"
+                                    alt="ABC"
+                                />
+                                <div>
+                                    <input type="text" id="secondNumber18" />
+                                </div>
+                            </div>
+                            <div>
+                                <img
+                                    src="./pictures/18que/thirdAngle.svg"
+                                    alt="BCA"
+                                />
+                                <div>
+                                    <input type="text" id="thirdNumber18" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="protractor18">
+                            <div class="leftEdge"></div>
+                            <img
+                                src="./pictures/18que/protractor.svg"
+                                alt="protractor"
+                                class="imgRuler"
+                            />
+                            <div class="rightEdge"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question19">
+                <div class="nameTask">Question 19</div>
+                <div class="app19">
+                    <div class="titlePage19">
+                        Find the perimeter of the shape.
+                    </div>
+                    <div class="lineUnderHeading19"></div>
+                    <div class="content19">
+                        <div class="figure19">
+                            <img
+                                src="./pictures/19que/firstFigure.svg"
+                                alt="figure"
+                            />
+                        </div>
+                        <div class="input19">
+                            <input type="text" id="firstNumber19" />
+                            cm
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question20">
+                <div class="nameTask">Question 20</div>
+                <div class="app20">
+                    <div class="titlePage20">
+                        The perimeter of the shape is 24 cm. Find the length of
+                        the unknown side.
+                    </div>
+                    <div class="lineUnderHeading20"></div>
+                    <div class="content20">
+                        <div class="figure20">
+                            <img
+                                src="./pictures/20que/firstFigure.svg"
+                                alt="figure"
+                            />
+                        </div>
+                        <div class="input20">
+                            <input type="text" id="firstNumber20" />
+                            cm
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question21">
+                <div class="nameTask">Question 21</div>
+                <div class="app21">
+                    <div class="titlePage21">
+                        Which is the approximate measure of the angle?
+                    </div>
+                    <div class="subtitle">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Choose the most suitable answer
+                    </div>
+                    <div class="lineUnderHeading21"></div>
+                    <div class="content21">
+                        <div class="figure21">
+                            <img
+                                src="./pictures/21que/firstFigure.svg"
+                                alt="figure"
+                            />
+                        </div>
+                        <div class="btns21">
+                            <div id="firstBtn21">90°</div>
+                            <div id="secondBtn21">60°</div>
+                            <div id="thirdBtn21">15°</div>
+                            <div id="fourthBtn21">95°</div>
+                            <div id="fifthBtn21">5°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question22">
+                <div class="nameTask">Question 22</div>
+                <div class="app22">
+                    <div class="titlePage22">Convert units of time:</div>
+                    <div class="lineUnderHeading22"></div>
+                    <div class="content22">
+                        <div class="leftBlock22">
+                            <div class="top1row22">
+                                7 minutes 32 seconds =
+                                <div>
+                                    <input type="text" id="firstNumber22" />
+                                </div>
+                                seconds
+                            </div>
+                            <div class="bottom1row22">
+                                4 weeks 6 days =
+                                <div>
+                                    <input type="text" id="secondNumber22" />
+                                </div>
+                                days
+                            </div>
+                        </div>
+                        <div class="rightBlock22">
+                            <div class="top2row22">
+                                9 minutes 11 seconds =
+                                <div>
+                                    <input type="text" id="thirdNumber22" />
+                                </div>
+                                seconds
+                            </div>
+                            <div class="bottom2row22">
+                                5 days 4 hours =
+                                <div>
+                                    <input type="text" id="fourthNumber22" />
+                                </div>
+                                days
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question23">
+                <div class="nameTask">Question 23</div>
+                <div class="app23">
+                    <div class="titlePage23">
+                        If the Bee Hummingbird beats its wings 80 times per
+                        second,
+                        <br />
+                        how many times does it beat per hour?
+                    </div>
+                    <div class="lineUnderHeading23"></div>
+                    <div class="content23">
+                        <input type="text" id="firstNumber23" />
+                        Beats
+                    </div>
+                </div>
+            </div>
+            <div class="question24">
+                <div class="nameTask">Question 24</div>
+                <div class="app24">
+                    <div class="titlePage24">
+                        Match the number of sides to the names of the shapes.
+                    </div>
+                    <div class="lineUnderHeading24"></div>
+                    <div class="content24">
+                        <div class="figures24">
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstEmpty24"
+                            ></div>
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondEmpty24"
+                            ></div>
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdEmpty24"
+                            ></div>
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthEmpty24"
+                            ></div>
+                        </div>
+                        <div class="namesFigures24">
+                            <img
+                                src="./pictures/24que/namesFigures.svg"
+                                alt="names figures"
+                            />
+                        </div>
+                        <div class="btns24">
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="firstBtn24"
+                            >
+                                6
+                            </div>
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="secondBtn24"
+                            >
+                                8
+                            </div>
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="thirdBtn24"
+                            >
+                                7
+                            </div>
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fourthBtn24"
+                            >
+                                10
+                            </div>
+                            <div
+                                ondragstart="drag24(event)"
+                                ondrop="drop24(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="fifthBtn24"
+                            >
+                                9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question25">
+                <div class="nameTask">Question 25</div>
+                <div class="app25">
+                    <div class="titlePage25">Are the lines parallel?</div>
+                    <div class="subtitle25">
+                        <img src="./pictures/icon.svg" alt="icon" />
+                        Drag lines closer to double check your answer.
+                    </div>
+                    <div class="lineUnderHeading25"></div>
+                    <div class="content25">
+                        <div class="figures25">
+                            <div class="greenArrow" style="cursor: grab">
+                                <img
+                                    src="./pictures/25que/greenArrow.svg"
+                                    alt="green arrow"
+                                />
+                            </div>
+                            <div class="blueArrow">
+                                <img
+                                    src="./pictures/25que/blueArrow.svg"
+                                    alt="blue arrow"
+                                />
+                            </div>
+                        </div>
+                        <div class="btns25">
+                            <div id="firstBtn25">yes</div>
+                            <div id="secondBtn25">no</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question26">
+                <div class="nameTask">Question 26</div>
+                <div class="app26">
+                    <div class="titlePage26">
+                        The graph shows how many students entered the
+                        universities. <br />
+                        Use the table to find how many students got into the
+                        Eastern University.
+                    </div>
+                    <div class="subtitle26">
+                        <img src="./pictures/icon.svg" alt="icon" />Move the bar
+                        to show your answer.
+                    </div>
+                    <div class="lineUnderHeading26"></div>
+                    <div class="content26">
+                        <div class="graph26">
+                            <img src="./pictures/26que/graph.svg" alt="graph" />
+                        </div>
+                        <div class="table26">
+                            <div class="leftColumn26">
+                                <div class="first1row26">The university</div>
+                                <div class="second1row26">
+                                    Western University
+                                </div>
+                                <div class="third1row26">
+                                    Southern University
+                                </div>
+                                <div class="fourth1row26">
+                                    Eastern University
+                                </div>
+                                <div class="fifth1row26">Total</div>
+                            </div>
+                            <div class="rightColumn26">
+                                <div class="first2row26">Students</div>
+                                <div class="second2row26">200</div>
+                                <div class="third2row26">100</div>
+                                <div class="fourth2row26">?</div>
+                                <div class="fifth2row26">700</div>
+                            </div>
+                        </div>
+                        <div class="adjustableLevel">
+                            <img
+                                src="./pictures/26que/adjustableLevel.svg"
+                                alt="adjustable level"
+                                style="z-index: 2"
+                            />
+                            <div id="resizable" class="ui-widget-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnsEnd">
+                <div class="submit">
+                    <input type="button" value="Check my answers" id="submit" />
+                </div>
+                <div class="clear">
+                    <div value="Clear" id="clear">
+                        <img src="./pictures/reset.svg" alt="reset" />
+                        <div class="nameBtn">Clear</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./index.js"></script>
+</html>

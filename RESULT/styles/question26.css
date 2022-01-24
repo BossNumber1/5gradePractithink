@@ -1,0 +1,129 @@
+.app26 {
+    width: 1170px;
+    height: 687px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage26 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 66px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading26 {
+    top: 140px;
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content26 {
+    top: 100px;
+    left: calc(50% - 1000px / 2);
+    width: 1000px;
+    height: 369px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.graph26 {
+    width: 491px;
+    height: 369px;
+}
+
+.table26 {
+    top: -25px;
+    width: 398px;
+    height: 221px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftColumn26,
+.rightColumn26 {
+    width: 199.54px;
+    height: 221px;
+}
+
+/* rows styles */
+
+.first1row26,
+.second1row26,
+.third1row26,
+.fourth1row26,
+.fifth1row26,
+.first2row26,
+.second2row26,
+.third2row26,
+.fourth2row26,
+.fifth2row26 {
+    width: 199.54px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    padding-top: 12.5px;
+    text-align: center;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.first1row26,
+.first2row26 {
+    background: #68c2d0;
+    color: white;
+}
+
+.first1row26,
+.second1row26,
+.third1row26,
+.fourth1row26,
+.fifth1row26,
+.first2row26 {
+    font-weight: 600;
+}
+
+.second2row26,
+.third2row26,
+.fourth2row26,
+.fifth2row26 {
+    font-weight: 500;
+}
+
+.adjustableLevel {
+    position: absolute;
+    width: 69px;
+    height: 293px;
+    left: 300px;
+    top: 25.5px;
+    box-sizing: border-box;
+}
+
+#resizable {
+    top: -88.5px;
+    height: 84px;
+    width: 67px;
+    position: relative;
+    background: #ea368c;
+}

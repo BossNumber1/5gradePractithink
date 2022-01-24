@@ -1,0 +1,77 @@
+.app21 {
+    width: 1170px;
+    height: 511px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage21 {
+    top: 25px;
+    width: 1170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading21 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 100px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content21 {
+    top: 100px;
+    left: calc(50% - 430px / 2);
+    width: 430px;
+    height: 268.32px;
+}
+
+.figure21 {
+    left: calc(50% - 215.86px / 2);
+    width: 215.86px;
+    height: 193.32px;
+}
+
+/* btns styles */
+
+.btns21 {
+    top: 29px;
+    left: calc(50% - 430px / 2);
+    width: 430px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.btns21 div:not(.statusMiniIcon) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 70px;
+    height: 45px;
+    background: #fff;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}

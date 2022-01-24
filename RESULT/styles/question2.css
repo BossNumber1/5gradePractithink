@@ -1,0 +1,65 @@
+.app2 {
+    width: 1170px;
+    height: 373px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage2 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading2 {
+    top: 120px;
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content2 {
+    top: 85px;
+    left: calc(50% - 629px / 2);
+    width: 629px;
+    height: 110px;
+}
+
+.topRow2,
+.centerRow2,
+.bottomRow2 {
+    width: 629px;
+    height: 30px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.topRow2 div,
+.centerRow2 div,
+.bottomRow2 div {
+    margin-right: 10px;
+}
+
+.content2 input {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid;
+}

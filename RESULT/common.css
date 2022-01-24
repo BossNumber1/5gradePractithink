@@ -1,0 +1,415 @@
+@import "adaptiv.css";
+
+@import "./styles/question1.css";
+@import "./styles/question2.css";
+@import "./styles/question3.css";
+@import "./styles/question4.css";
+@import "./styles/question5.css";
+@import "./styles/question6.css";
+@import "./styles/question7.css";
+@import "./styles/question8.css";
+@import "./styles/question9.css";
+@import "./styles/question10.css";
+@import "./styles/question11.css";
+@import "./styles/question12.css";
+@import "./styles/question13.css";
+@import "./styles/question14.css";
+@import "./styles/question15.css";
+@import "./styles/question16.css";
+@import "./styles/question17.css";
+@import "./styles/question18.css";
+@import "./styles/question19.css";
+@import "./styles/question20.css";
+@import "./styles/question21.css";
+@import "./styles/question22.css";
+@import "./styles/question23.css";
+@import "./styles/question24.css";
+@import "./styles/question25.css";
+@import "./styles/question26.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-areas: "app";
+    grid-template-columns: 99%;
+}
+
+.app {
+    grid-area: app;
+}
+
+* {
+    position: relative;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.nameTask {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #369cb7;
+    margin: 0 0 5px 40px;
+}
+
+.subtitle,
+.subtitle3,
+.subtitle6,
+.subtitle8,
+.subtitle9,
+.subtitle12,
+.subtitle14,
+.subtitle16,
+.subtitle25,
+.subtitle26 {
+    margin-top: 35px;
+    width: 1170px;
+    height: 24px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #065b5b;
+    text-align: center;
+}
+
+.subtitle3,
+.subtitle6,
+.subtitle9,
+.subtitle12,
+.subtitle16,
+.subtitle25,
+.subtitle26 {
+    margin-top: 17px;
+}
+
+.subtitle8 {
+    margin-top: 20px;
+}
+
+.subtitle {
+    margin-top: 35px;
+}
+
+.subtitle14 {
+    margin-top: 60px;
+}
+
+.subtitle img,
+.subtitle3 img,
+.subtitle6 img,
+.subtitle8 img,
+.subtitle9 img,
+.subtitle12 img,
+.subtitle14 img,
+.subtitle16 img,
+.subtitle25 img,
+.subtitle26 img {
+    margin-right: 5px;
+}
+
+/* correct answer styles */
+
+.correctAnswer1,
+.correctAnswer2,
+.correctAnswer3,
+.correctAnswer4,
+.correctAnswer5,
+.correctAnswer6,
+.correctAnswer7,
+.correctAnswer8,
+.correctAnswer9,
+.correctAnswer10,
+.correctAnswer11,
+.correctAnswer12,
+.correctAnswer13,
+.correctAnswer14,
+.correctAnswer15,
+.correctAnswer16,
+.correctAnswer17,
+.correctAnswer18,
+.correctAnswer19,
+.correctAnswer20,
+.correctAnswer21,
+.correctAnswer22,
+.correctAnswer23,
+.correctAnswer24,
+.correctAnswer25,
+.correctAnswer26 {
+    left: calc(50% - 450px / 2);
+    width: 450px;
+    height: 94px;
+}
+
+.correctAnswer10 {
+    top: 40px;
+}
+
+.correctAnswer23 {
+    top: 120px;
+}
+
+.correctAnswer26 {
+    top: 200px;
+}
+
+.correctAnswer18,
+.correctAnswer5,
+.correctAnswer7,
+.correctAnswer1,
+.correctAnswer2,
+.correctAnswer8,
+.correctAnswer17,
+.correctAnswer14 {
+    top: 160px;
+}
+
+.correctAnswer3,
+.correctAnswer4,
+.correctAnswer6,
+.correctAnswer9,
+.correctAnswer11,
+.correctAnswer12,
+.correctAnswer13,
+.correctAnswer19,
+.correctAnswer21 {
+    top: 180px;
+}
+
+.correctAnswer20,
+.correctAnswer22,
+.correctAnswer24,
+.correctAnswer25 {
+    top: 200px;
+}
+
+.correctAnswer15 {
+    top: 260px;
+}
+
+.correctAnswer16 {
+    top: 300px;
+}
+
+.correctAnswer7 img:not(:last-child),
+.correctAnswer12 img:not(:last-child),
+.correctAnswer13 img:not(:last-child),
+.correctAnswer16 img:not(:last-child) {
+    margin-right: 30px;
+}
+
+.headerCorrectAnswer {
+    left: calc(50% - 237px / 2);
+    width: 237px;
+    height: 22px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2f2f2f;
+}
+
+/* content correct answer styles */
+
+.contentCorrectAnswer,
+.contentCorrectAnswer2,
+.contentCorrectAnswer3,
+.contentCorrectAnswer4,
+.contentCorrectAnswer5,
+.contentCorrectAnswer6,
+.contentCorrectAnswer7,
+.contentCorrectAnswer8,
+.contentCorrectAnswer9,
+.contentCorrectAnswer10,
+.contentCorrectAnswer11,
+.contentCorrectAnswer12,
+.contentCorrectAnswer13,
+.contentCorrectAnswer14,
+.contentCorrectAnswer15,
+.contentCorrectAnswer16,
+.contentCorrectAnswer17,
+.contentCorrectAnswer18,
+.contentCorrectAnswer19,
+.contentCorrectAnswer22,
+.contentCorrectAnswer24,
+.contentCorrectAnswer26 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.contentCorrectAnswer {
+    top: 20px;
+}
+
+.contentCorrectAnswer17 {
+    top: 50px;
+}
+
+.contentCorrectAnswer15 {
+    top: 140px;
+}
+
+.contentCorrectAnswer8,
+.contentCorrectAnswer7,
+.contentCorrectAnswer2,
+.contentCorrectAnswer10 {
+    top: 60px;
+}
+
+.contentCorrectAnswer11,
+.contentCorrectAnswer13,
+.contentCorrectAnswer22 {
+    top: 100px;
+}
+
+.contentCorrectAnswer26 {
+    top: 200px;
+}
+
+.contentCorrectAnswer6,
+.contentCorrectAnswer14,
+.contentCorrectAnswer19 {
+    top: 120px;
+}
+
+.contentCorrectAnswer24 {
+    top: 40px;
+}
+
+.contentCorrectAnswer5 {
+    top: 140px;
+}
+
+.contentCorrectAnswer12,
+.contentCorrectAnswer9,
+.contentCorrectAnswer4,
+.contentCorrectAnswer3 {
+    top: 160px;
+}
+
+.contentCorrectAnswer18 {
+    top: 180px;
+}
+
+.contentCorrectAnswer16 {
+    top: 240px;
+}
+
+.inputCorrectAnswer {
+    width: 70px;
+    height: 30px;
+    background-color: #9dd765;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputsHome,
+.inputsHome2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.inputsHome {
+    top: 160px;
+    width: 450px;
+}
+
+.inputsHome2 {
+    top: 60px;
+    left: calc(50% - 170px / 2);
+    width: 170px;
+    /* border: 1px solid gray; */
+}
+
+/* STYLES THE END PAGE */
+
+.btnsEnd {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 47px;
+    margin-top: 10px;
+}
+
+.submit input {
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #369cb7;
+    flex-direction: column;
+    padding: 20px;
+    width: 270px;
+    height: 50px;
+    background: #369cb7;
+    border: 0.5px solid #369cb7;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.clear div:not(.nameBtn) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: static;
+    width: 270px;
+    height: 50px;
+    left: calc(50% - 270px / 2 + 150px);
+    top: calc(50% - 50px / 2);
+    background: #ffffff;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.nameBtn {
+    position: static;
+    left: 48.15%;
+    right: 35.56%;
+    top: 26%;
+    bottom: 26%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #369cb7;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
