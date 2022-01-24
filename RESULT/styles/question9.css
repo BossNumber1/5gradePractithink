@@ -37,46 +37,44 @@
     left: calc(50% - 407px / 2);
     width: 407px;
     height: 93px;
-    border: 1px solid;
-}
-
-.figures9 {
-    width: 391px;
-    height: 170px;
-}
-
-.expression9 {
-    top: 30px;
-    left: calc(50% - 134px / 2);
-    width: 134px;
-    height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
+}
+
+.leftColumn9 {
+    width: 140px;
+    height: 93px;
+}
+
+.rightColumn9 {
+    width: 167px;
+    height: 93px;
+}
+
+.topRow9,
+.bottomRow9 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.topRow9 {
+    margin-top: 15px;
 }
 
 .content9 input {
-    width: 40px;
-    height: 30px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: -15px;
+    width: 25.06px;
+    height: 21.01px;
     border: 1px solid #2f2f2f;
+    box-sizing: border-box;
     border-radius: 5px;
-}
-
-/* inputs styles */
-
-.inputs9 div {
-    position: absolute;
-    top: -245px;
-}
-
-.inputs9 div:nth-child(1) {
-    left: 115px;
-}
-
-.inputs9 div:nth-child(2) {
-    left: 300px;
+    margin: 0 10px 0 5px;
+    text-align: center;
 }
