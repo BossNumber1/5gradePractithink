@@ -14,506 +14,6 @@ function commonForNoselectedBtn(arrayBtnsId) {
     });
 }
 
-// ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
-
-// для одной картинки
-
-function addCorrectAnswer(
-    numberCorrectAnswer,
-    numberQue,
-    numberContent,
-    numberContentCorrectAnswer
-) {
-    let newElement = document.createElement("div");
-    newElement.className = numberCorrectAnswer;
-
-    let childNewElement = document.createElement("div"); // сосед 1
-    childNewElement.className = "headerCorrectAnswer";
-    childNewElement.textContent = "Correct answer";
-
-    let secondChildNewElement = document.createElement("div"); // сосед 2
-    secondChildNewElement.className = numberContentCorrectAnswer;
-
-    let contentContent = document.createElement("img");
-    contentContent.src = "./pictures/" + numberQue + "/correctAnswer.svg";
-    contentContent.alt = "correct answer";
-
-    secondChildNewElement.appendChild(contentContent);
-
-    document.getElementsByClassName(numberContent)[0].appendChild(newElement);
-
-    document
-        .getElementsByClassName(numberCorrectAnswer)[0]
-        .appendChild(childNewElement);
-    document
-        .getElementsByClassName(numberCorrectAnswer)[0]
-        .appendChild(secondChildNewElement);
-}
-
-function addCorrectAnswerQuestion1() {
-    document.getElementsByClassName("app1")[0].style.height = "425px";
-    addCorrectAnswer("correctAnswer1", "1que", "app1", "contentCorrectAnswer");
-}
-
-function addCorrectAnswerQuestion2() {
-    document.getElementsByClassName("app2")[0].style.height = "600px";
-    addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer2");
-}
-
-function addCorrectAnswerQuestion3() {
-    document.getElementsByClassName("app3")[0].style.height = "900px";
-    addCorrectAnswer("correctAnswer3", "3que", "app3", "contentCorrectAnswer3");
-}
-
-function addCorrectAnswerQuestion4() {
-    document.getElementsByClassName("app4")[0].style.height = "900px";
-    addCorrectAnswer("correctAnswer4", "4que", "app4", "contentCorrectAnswer4");
-}
-
-function addCorrectAnswerQuestion5() {
-    document.getElementsByClassName("app5")[0].style.height = "900px";
-    addCorrectAnswer("correctAnswer5", "5que", "app5", "contentCorrectAnswer5");
-}
-
-function addCorrectAnswerQuestion6() {
-    document.getElementsByClassName("app6")[0].style.height = "800px";
-    addCorrectAnswer("correctAnswer6", "6que", "app6", "contentCorrectAnswer6");
-}
-
-function addCorrectAnswerQuestion7() {
-    document.getElementsByClassName("app7")[0].style.height = "700px";
-    addCorrectAnswer("correctAnswer7", "7que", "app7", "contentCorrectAnswer7");
-}
-
-function addCorrectAnswerQuestion8() {
-    document.getElementsByClassName("app8")[0].style.height = "550px";
-    addCorrectAnswer("correctAnswer8", "8que", "app8", "contentCorrectAnswer8");
-}
-
-function addCorrectAnswerQuestion9() {
-    document.getElementsByClassName("app9")[0].style.height = "900px";
-    addCorrectAnswer("correctAnswer9", "9que", "app9", "contentCorrectAnswer9");
-}
-
-function addCorrectAnswerQuestion10() {
-    document.getElementsByClassName("app10")[0].style.height = "550px";
-    addCorrectAnswer(
-        "correctAnswer10",
-        "10que",
-        "app10",
-        "contentCorrectAnswer"
-    );
-}
-
-function addCorrectAnswerQuestion11() {
-    document.getElementsByClassName("app11")[0].style.height = "700px";
-    addCorrectAnswer(
-        "correctAnswer11",
-        "11que",
-        "app11",
-        "contentCorrectAnswer11"
-    );
-}
-
-function addCorrectAnswerQuestion12() {
-    document.getElementsByClassName("app12")[0].style.height = "900px";
-    addCorrectAnswer(
-        "correctAnswer12",
-        "12que",
-        "app12",
-        "contentCorrectAnswer12"
-    );
-}
-
-function addCorrectAnswerQuestion13() {
-    document.getElementsByClassName("app13")[0].style.height = "700px";
-    addCorrectAnswer(
-        "correctAnswer13",
-        "13que",
-        "app13",
-        "contentCorrectAnswer13"
-    );
-}
-
-function addCorrectAnswerQuestion14() {
-    document.getElementsByClassName("app14")[0].style.height = "500px";
-    addCorrectAnswer(
-        "correctAnswer14",
-        "14que",
-        "app14",
-        "contentCorrectAnswer"
-    );
-}
-
-function addCorrectAnswerQuestion15() {
-    document.getElementsByClassName("app15")[0].style.height = "1000px";
-    addCorrectAnswer(
-        "correctAnswer15",
-        "15que",
-        "app15",
-        "contentCorrectAnswer15"
-    );
-}
-
-function addCorrectAnswerQuestion16() {
-    document.getElementsByClassName("app16")[0].style.height = "1200px";
-    addCorrectAnswer(
-        "correctAnswer16",
-        "16que",
-        "app16",
-        "contentCorrectAnswer16"
-    );
-}
-
-function addCorrectAnswerQuestion17() {
-    document.getElementsByClassName("app17")[0].style.height = "650px";
-    addCorrectAnswer(
-        "correctAnswer17",
-        "17que",
-        "app17",
-        "contentCorrectAnswer"
-    );
-}
-
-function addCorrectAnswerQuestion18() {
-    document.getElementsByClassName("app18")[0].style.height = "700px";
-    addCorrectAnswer(
-        "correctAnswer18",
-        "18que",
-        "app18",
-        "contentCorrectAnswer"
-    );
-}
-
-function addCorrectAnswerQuestion19() {
-    document.getElementsByClassName("app19")[0].style.height = "700px";
-    addCorrectAnswer(
-        "correctAnswer19",
-        "19que",
-        "app19",
-        "contentCorrectAnswer"
-    );
-}
-
-function addCorrectAnswerQuestion20() {
-    document.getElementsByClassName("app20")[0].style.height = "700px";
-    addCorrectAnswer(
-        "correctAnswer20",
-        "20que",
-        "app20",
-        "contentCorrectAnswer"
-    );
-}
-
-// ------------------------------------------------------------ ALL DRAG AND DROP -------------------------------------------------------------
-
-// common commands
-
-function allowDrop(e) {
-    e.preventDefault();
-}
-
-// 5 QUESTION
-
-function drag5(e) {
-    localStorage.setItem("idOrigin5question4class", e.target.id);
-    localStorage.setItem(
-        "textContent5question4class",
-        e.target.textContent.trim()
-    );
-}
-
-function drop5(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin5question4class");
-    let textContent = localStorage.getItem("textContent5question4class");
-
-    // получаем id, на который кладём элемент
-    let currentId = e.target.id;
-
-    // получаем объекты
-    let orignalElement = document.getElementById(idOrig);
-    let currentElement = document.getElementById(currentId);
-
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    currentElement.style.opacity = "1";
-    currentElement.style.color = "white";
-    currentElement.style.cursor = "grab";
-
-    orignalElement.textContent = "";
-    orignalElement.style.opacity = "0.3";
-    orignalElement.style.cursor = "default";
-
-    // меняем id местами
-    currentElement.id = idOrig;
-    orignalElement.id = currentId;
-}
-
-// 7 QUESTION
-
-function drag7(e) {
-    localStorage.setItem("idOrigin7question4class", e.target.id);
-    localStorage.setItem(
-        "textContent7question4class",
-        e.target.textContent.trim()
-    );
-}
-
-function drop7(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin7question4class");
-    let textContent = localStorage.getItem("textContent7question4class");
-
-    // получаем id, на который кладём элемент
-    let currentId = e.target.id;
-
-    // получаем объекты
-    let orignalElement = document.getElementById(idOrig);
-    let currentElement = document.getElementById(currentId);
-
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    orignalElement.textContent = "";
-
-    // меняем id местами
-    currentElement.id = idOrig;
-    orignalElement.id = currentId;
-}
-
-// 10 QUESTION
-
-function drag10(e) {
-    localStorage.setItem("idOrigin10question4class", e.target.id);
-    localStorage.setItem(
-        "textContent10question4class",
-        e.target.textContent.trim()
-    );
-}
-
-function drop10(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin10question4class");
-    let textContent = localStorage.getItem("textContent10question4class");
-
-    // получаем id, на который кладём элемент
-    let currentId = e.target.id;
-
-    // получаем объекты
-    let orignalElement = document.getElementById(idOrig);
-    let currentElement = document.getElementById(currentId);
-
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    currentElement.style.opacity = "1";
-    currentElement.style.color = "white";
-    currentElement.style.cursor = "grab";
-
-    orignalElement.textContent = "";
-    orignalElement.style.opacity = "0.3";
-    orignalElement.style.cursor = "default";
-
-    // меняем id местами
-    currentElement.id = idOrig;
-    orignalElement.id = currentId;
-}
-
-// 15 QUESTION
-let howManyTimesHasBeenMoved = 0;
-
-function drag15(e) {
-    localStorage.setItem("idOrigin15question4class", e.target.id);
-    localStorage.setItem(
-        "textContent15question4class",
-        e.target.textContent.trim()
-    );
-}
-
-function drop15(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin15question4class");
-    let textContent = localStorage.getItem("textContent15question4class");
-
-    // получаем id, на который кладём элемент
-    let currentId = e.target.id;
-
-    // получаем объекты
-    let orignalElement = document.getElementById(idOrig);
-    let currentElement = document.getElementById(currentId);
-
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    currentElement.style.opacity = "1";
-    currentElement.style.color = "white";
-    currentElement.style.cursor = "grab";
-
-    if (idOrig !== "secondBtn15") {
-        orignalElement.textContent = "";
-        orignalElement.style.opacity = "0.3";
-        orignalElement.style.cursor = "default";
-
-        // меняем id местами
-        currentElement.id = idOrig;
-        orignalElement.id = currentId;
-    } else {
-        howManyTimesHasBeenMoved++;
-
-        if (howManyTimesHasBeenMoved === 1) {
-            currentElement.id = "";
-        }
-    }
-
-    if (howManyTimesHasBeenMoved === 2) {
-        orignalElement.textContent = "";
-        orignalElement.style.opacity = "0.3";
-        orignalElement.style.cursor = "default";
-
-        orignalElement.id = currentId;
-    }
-}
-
-// 17 QUESTION
-
-function drag17(e) {
-    localStorage.setItem("idOrigin17question4class", e.target.id);
-    localStorage.setItem(
-        "textContent17question4class",
-        e.target.textContent.trim()
-    );
-}
-
-function drop17(e) {
-    // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin17question4class");
-    let textContent = localStorage.getItem("textContent17question4class");
-
-    // получаем id, на который кладём элемент
-    let currentId = e.target.id;
-
-    // получаем объекты
-    let orignalElement = document.getElementById(idOrig);
-    let currentElement = document.getElementById(currentId);
-
-    // меняем блоки местами
-    currentElement.textContent = textContent;
-    orignalElement.textContent = "";
-
-    // меняем id местами
-    currentElement.id = idOrig;
-    orignalElement.id = currentId;
-}
-
-// ----------------------------------------------------------- ROTATE PROTRACTOR ---------------------------------------------------------------
-
-dragElement(document.getElementsByClassName("protractor18")[0]);
-
-const rotationFunction = new Propeller(
-    document.getElementsByClassName("protractor18")[0],
-    {
-        inertia: 0,
-    }
-);
-
-function dragElement(element) {
-    let pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-
-    element.onmousedown = dragMouseDown;
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        element.style.top = element.offsetTop - pos2 + "px";
-        element.style.left = element.offsetLeft - pos1 + "px";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
-
-document
-    .getElementsByClassName("protractor18")[0]
-    .addEventListener("mousedown", (e) => {
-        if (
-            (e.target.className !== "leftEdge" ||
-                e.target.className !== "rightEdge") &&
-            e.target.className === "imgRuler"
-        ) {
-            rotationFunction.stop();
-            dragElement(document.getElementsByClassName("protractor18")[0]);
-        }
-
-        if (
-            (e.target.className === "leftEdge" ||
-                e.target.className === "rightEdge") &&
-            e.target.className !== "imgRuler"
-        ) {
-            rotationFunction.onRotated(e);
-        }
-    });
-
-// ----------------------------------------------------------- ROTATE ARROWS ---------------------------------------------------------------
-
-dragElement2(document.getElementsByClassName("greenArrow")[0]);
-
-function dragElement2(element) {
-    let pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-
-    element.onmousedown = dragMouseDown;
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        element.style.top = element.offsetTop - pos2 + "px";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
-
-document
-    .getElementsByClassName("greenArrow")[0]
-    .addEventListener("mousedown", (e) => {
-        dragElement2(document.getElementsByClassName("greenArrow")[0]);
-    });
-
 // --------------------------------------------------------------------- validation of input fields ----------------------------------------------
 
 // -------------------------------------------------------------common function---------------------------------------------------
@@ -1054,7 +554,7 @@ let numbers1 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [342, 17, 261, 5], 1, numbers1);
+gettingDataFromFields(4, [5054, 7014, 2971, 7716], 1, numbers1);
 
 function question1() {
     if (
@@ -1063,7 +563,25 @@ function question1() {
         numbers1.thirdNumber != "" &&
         numbers1.fourthNumber != ""
     ) {
-        succerrorAndCreateMiniIcon(4, 1, numbers1);
+        succerror(
+            document.getElementById("firstNumber1"),
+            numbers1.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber1"),
+            numbers1.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber1"),
+            numbers1.thirdNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fourthNumber1"),
+            numbers1.fourthNumber === "wrong"
+        );
 
         // выносим общий статус к номеру вопроса
 
@@ -1087,7 +605,7 @@ function question1() {
                 1
             );
 
-            addCorrectAnswerQuestion1();
+            // addCorrectAnswerQuestion1();
         }
     } else {
         highlightUnselectedBlocks(4, 1, numbers1);
@@ -1102,7 +620,7 @@ let numbers2 = {
     thirdNumber: "",
 };
 
-gettingDataFromFields(3, [320, 240, 400], 2, numbers2);
+// gettingDataFromFields(3, [320, 240, 400], 2, numbers2);
 
 function question2() {
     if (
@@ -1148,7 +666,7 @@ let numbers3 = {
     thirdNumber: "",
 };
 
-gettingDataFromFields(3, [52, 40, 12], 3, numbers3);
+// gettingDataFromFields(3, [52, 40, 12], 3, numbers3);
 
 function question3() {
     if (
@@ -1195,7 +713,7 @@ let numbers4 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [12, 28, 40, 44], 4, numbers4);
+// gettingDataFromFields(4, [12, 28, 40, 44], 4, numbers4);
 
 function question4() {
     if (
@@ -1365,12 +883,12 @@ let numbers6 = {
     sixthNumber: "",
 };
 
-gettingDataFromFields(
-    6,
-    ["3/10", "1/8", "2/9", "5/12", "3/5", "6/7"],
-    6,
-    numbers6
-);
+// gettingDataFromFields(
+//     6,
+//     ["3/10", "1/8", "2/9", "5/12", "3/5", "6/7"],
+//     6,
+//     numbers6
+// );
 
 function question6() {
     if (
@@ -1423,7 +941,7 @@ let numbers7 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [4, 8, 3, 6], 7, numbers7);
+// gettingDataFromFields(4, [4, 8, 3, 6], 7, numbers7);
 
 function question7() {
     let firstEmpty = document.getElementsByClassName("firstEmpty7")[0];
@@ -1504,7 +1022,7 @@ let numbers8 = {
     eighthNumber: "",
 };
 
-gettingDataFromFields(8, [2, 8, 1, 8, 2, 8, 5, 8], 8, numbers8);
+// gettingDataFromFields(8, [2, 8, 1, 8, 2, 8, 5, 8], 8, numbers8);
 
 function question8() {
     if (
@@ -1560,7 +1078,7 @@ let numbers9 = {
     thirdNumber: "",
 };
 
-gettingDataFromFields(3, [109, 100, 9], 9, numbers9);
+// gettingDataFromFields(3, [109, 100, 9], 9, numbers9);
 
 function question9() {
     if (
@@ -1869,7 +1387,7 @@ let numbers12 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [1215, 1000, 200, 15], 12, numbers12);
+// gettingDataFromFields(4, [1215, 1000, 200, 15], 12, numbers12);
 
 function question12() {
     if (
@@ -1918,12 +1436,12 @@ let numbers13 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(
-    4,
-    ["10 1/2", "16 2/3", "18 1/5", "24 3/8"],
-    13,
-    numbers13
-);
+// gettingDataFromFields(
+//     4,
+//     ["10 1/2", "16 2/3", "18 1/5", "24 3/8"],
+//     13,
+//     numbers13
+// );
 
 function question13() {
     if (
@@ -1972,7 +1490,7 @@ let numbers14 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, ["2/5", "30", "60/5", "12"], 14, numbers14);
+// gettingDataFromFields(4, ["2/5", "30", "60/5", "12"], 14, numbers14);
 
 function question14() {
     if (
@@ -2114,7 +1632,7 @@ let numbers16 = {
     fifthNumber: "",
 };
 
-gettingDataFromFields(5, [828, 600, 90, 120, 18], 16, numbers16);
+// gettingDataFromFields(5, [828, 600, 90, 120, 18], 16, numbers16);
 
 function question16() {
     if (
@@ -2165,7 +1683,7 @@ let numbers17 = {
     fourthNumber: "",
 };
 
-gettingDataFromFields(4, [8, 12, 3, 4], 17, numbers17);
+// gettingDataFromFields(4, [8, 12, 3, 4], 17, numbers17);
 
 function question17() {
     let firstEmpty = document.getElementsByClassName("firstEmpty17")[0];
@@ -2241,7 +1759,7 @@ let numbers18 = {
     thirdNumber: "",
 };
 
-gettingDataFromFields(3, [40, 90, 50], 18, numbers18);
+// gettingDataFromFields(3, [40, 90, 50], 18, numbers18);
 
 function question18() {
     if (
@@ -2285,7 +1803,7 @@ let numbers19 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [14], 19, numbers19);
+// gettingDataFromFields(1, [14], 19, numbers19);
 
 function question19() {
     if (numbers19.firstNumber != "") {
@@ -2321,7 +1839,7 @@ let numbers20 = {
     firstNumber: "",
 };
 
-gettingDataFromFields(1, [2], 20, numbers20);
+// gettingDataFromFields(1, [2], 20, numbers20);
 
 function question20() {
     if (numbers20.firstNumber != "") {
@@ -2355,23 +1873,23 @@ function question20() {
 
 document.getElementById("submit").onclick = function () {
     question1();
-    question2();
-    question3();
-    question4();
-    question5();
-    question6();
-    question7();
-    question8();
-    question9();
-    question10();
-    question11();
-    question12();
-    question13();
-    question14();
-    question15();
-    question16();
-    question17();
-    question18();
-    question19();
-    question20();
+    // question2();
+    // question3();
+    // question4();
+    // question5();
+    // question6();
+    // question7();
+    // question8();
+    // question9();
+    // question10();
+    // question11();
+    // question12();
+    // question13();
+    // question14();
+    // question15();
+    // question16();
+    // question17();
+    // question18();
+    // question19();
+    // question20();
 };
