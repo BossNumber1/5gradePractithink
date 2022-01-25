@@ -40,15 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid;
-}
-
-.firstBlock1,
-.secondBlock1,
-.thirdBlock1,
-.fourthBlock1 {
-    width: 118px;
-    height: 63px;
+    /* border: 1px solid; */
 }
 
 .content1 input {
@@ -56,20 +48,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 40px;
+    padding: 6px 16px;
+    width: 88px;
     height: 30px;
-    border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
     text-align: center;
-}
-
-.content1input {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 76px;
-    height: 30px;
-    top: 13px;
-    margin-left: 10px;
+    margin-left: 8px;
+    border: 1px solid;
 }
