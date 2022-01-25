@@ -39,7 +39,6 @@
     left: calc(50% - 339px / 2);
     width: 339px;
     height: 265px;
-    /* border: 1px solid; */
     display: flex;
     align-items: center;
     justify-content: space-between;
