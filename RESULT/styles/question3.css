@@ -37,53 +37,81 @@
     left: calc(50% - 703px / 2);
     width: 703px;
     height: 260px;
-    border: 1px solid;
 }
 
-.figures3 {
-    width: 391px;
-    height: 170px;
-}
+/* top row styles */
 
-.expression3 {
-    top: 40px;
-    left: calc(50% - 117px / 2);
-    width: 117px;
-    height: 30px;
+.topRow3 {
+    height: 175px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
 }
 
-.content3 input {
-    width: 40px;
-    height: 30px;
+.leftColumn3 {
+    width: 301px;
+    height: 175px;
+}
+
+.rightColumn3 {
+    width: 301px;
+    height: 175px;
+}
+
+.firstRow3,
+.secondRow3,
+.thirdRow3 {
+    height: 45px;
+    margin-bottom: 17.5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* bottom row styles */
+
+.bottomRow3 {
+    top: 40px;
+    left: calc(50% - 520px / 2);
+    width: 520px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomRow3 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 45px;
+    background: #369cb7;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
     border-radius: 5px;
-    text-align: center;
+    color: white;
+    cursor: grab;
 }
 
-.expression3 input {
-    border: 1px solid #2f2f2f;
+.bottomRow3 div:not(:last-child) {
+    margin-right: 30px;
 }
 
-/* inputs styles */
-
-.inputs3 input {
-    border: 1px solid #0995e3;
-}
-
-.inputs3 div {
-    position: absolute;
-    top: -115px;
-}
-
-.inputs3 div:nth-child(1) {
-    left: 115px;
-}
-
-.inputs3 div:nth-child(2) {
-    left: 300px;
+.place3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 45px;
+    background: #369cb7;
+    opacity: 0.3;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0px 15px;
 }
