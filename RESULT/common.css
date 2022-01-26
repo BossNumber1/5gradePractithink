@@ -284,7 +284,10 @@ body {
     top: 140px;
 }
 
-.contentCorrectAnswer8,
+.contentCorrectAnswer8 {
+    top: 140px;
+}
+
 .contentCorrectAnswer7,
 .contentCorrectAnswer10 {
     top: 60px;

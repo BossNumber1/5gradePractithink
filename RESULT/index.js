@@ -251,7 +251,7 @@ function addCorrectAnswerQuestion7() {
 }
 
 function addCorrectAnswerQuestion8() {
-    document.getElementsByClassName("app8")[0].style.height = "550px";
+    document.getElementsByClassName("app8")[0].style.height = "850px";
     addCorrectAnswer("correctAnswer8", "8que", "app8", "contentCorrectAnswer8");
 }
 
@@ -1272,7 +1272,7 @@ function question8() {
                 8
             );
 
-            // addCorrectAnswerQuestion8();
+            addCorrectAnswerQuestion8();
         }
     } else {
         highlightUnselectedBlocks(6, 8, numbers8);
