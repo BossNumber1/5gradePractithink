@@ -123,7 +123,7 @@ function addMiniIcon(elem, status) {
     }
 
     if (elem.parentElement.parentElement.className === "content14") {
-        objDiv.style.marginTop = "-23px";
+        objDiv.style.marginTop = "-55px";
     }
 
     if (elem.parentElement.parentElement.className === "content21") {
@@ -1198,30 +1198,17 @@ function question13() {
 
 let numbers14 = {
     firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
 };
 
-// gettingDataFromFields(4, ["2/5", "30", "60/5", "12"], 14, numbers14);
+gettingDataFromFields(1, [0.52], 14, numbers14);
 
 function question14() {
-    if (
-        numbers14.firstNumber !== "" &&
-        numbers14.secondNumber !== "" &&
-        numbers14.thirdNumber !== "" &&
-        numbers14.fourthNumber !== ""
-    ) {
-        succerrorAndCreateMiniIcon(4, 14, numbers14);
+    if (numbers14.firstNumber != "") {
+        succerrorAndCreateMiniIcon(1, 14, numbers14);
 
         // выносим общий статус к номеру вопроса
 
-        if (
-            numbers14.firstNumber === "right" &&
-            numbers14.secondNumber === "right" &&
-            numbers14.thirdNumber === "right" &&
-            numbers14.fourthNumber === "right"
-        ) {
+        if (numbers14.firstNumber === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question14"),
@@ -1239,7 +1226,7 @@ function question14() {
             // addCorrectAnswerQuestion14();
         }
     } else {
-        highlightUnselectedBlocks(4, 14, numbers14);
+        highlightUnselectedBlocks(1, 14, numbers14);
     }
 }
 
@@ -1598,7 +1585,7 @@ document.getElementById("submit").onclick = function () {
     question11();
     // question12();
     question13();
-    // question14();
+    question14();
     // question15();
     // question16();
     // question17();
