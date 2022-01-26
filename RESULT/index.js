@@ -136,6 +136,10 @@ function addMiniIcon(elem, status) {
         objDiv.style.marginTop = "-17px";
     }
 
+    if (elem.parentElement.parentElement.className === "content19") {
+        objDiv.style.marginTop = "-43px";
+    }
+
     if (elem.parentElement.parentElement.className === "content21") {
         objDiv.style.marginTop = "-23px";
     }
@@ -1475,7 +1479,7 @@ let numbers19 = {
     firstNumber: "",
 };
 
-// gettingDataFromFields(1, [14], 19, numbers19);
+gettingDataFromFields(1, [42.1], 19, numbers19);
 
 function question19() {
     if (numbers19.firstNumber != "") {
@@ -1562,6 +1566,6 @@ document.getElementById("submit").onclick = function () {
     question16();
     // question17();
     question18();
-    // question19();
+    question19();
     // question20();
 };
