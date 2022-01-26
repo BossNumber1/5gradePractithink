@@ -1232,34 +1232,49 @@ function question14() {
 
 // 15 QUESTION
 
+let numbers15 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+    fourthNumber: "",
+};
+
+gettingDataFromFields(4, [5, 6, 7, 11], 15, numbers15);
+
 function question15() {
-    // получаем содежимое блоков
-    let firstPlace = document.getElementsByClassName("firstPlace15")[0];
-    let secondPlace = document.getElementsByClassName("secondPlace15")[0];
-    let thirdPlace = document.getElementsByClassName("thirdPlace15")[0];
-    let fourthPlace = document.getElementsByClassName("fourthPlace15")[0];
-    let fifthPlace = document.getElementsByClassName("fifthPlace15")[0];
-
-    let firstPlaceText = firstPlace.textContent;
-    let secondPlaceText = secondPlace.textContent;
-    let thirdPlaceText = thirdPlace.textContent;
-    let fourthPlaceText = fourthPlace.textContent;
-    let fifthPlaceText = fifthPlace.textContent;
-
     if (
-        firstPlaceText !== "" &&
-        secondPlaceText !== "" &&
-        thirdPlaceText !== "" &&
-        fourthPlaceText !== "" &&
-        fifthPlaceText !== ""
+        numbers15.firstNumber != "" &&
+        numbers15.secondNumber != "" &&
+        numbers15.thirdNumber != "" &&
+        numbers15.fourthNumber != ""
     ) {
-        // проверяем на верность для создания статуса
+        succerror(
+            document.getElementById("firstNumber15"),
+            numbers15.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber15"),
+            numbers15.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber15"),
+            numbers15.thirdNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fourthNumber15"),
+            numbers15.fourthNumber === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
         if (
-            firstPlaceText === "straight" &&
-            secondPlaceText === "right" &&
-            thirdPlaceText === "obtuse" &&
-            fourthPlaceText === "acute" &&
-            fifthPlaceText === "obtuse"
+            numbers15.firstNumber === "right" &&
+            numbers15.secondNumber === "right" &&
+            numbers15.thirdNumber === "right" &&
+            numbers15.fourthNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1268,46 +1283,6 @@ function question15() {
                 15
             );
         } else {
-            if (firstPlaceText !== "straight") {
-                firstPlace.style.border = "2px solid #ED7777";
-                addMiniIcon(firstPlace, "failure");
-            } else if (firstPlaceText === "straight") {
-                firstPlace.style.border = "2px solid #9DD765";
-                addMiniIcon(firstPlace, "success");
-            }
-
-            if (secondPlaceText !== "right") {
-                secondPlace.style.border = "2px solid #ED7777";
-                addMiniIcon(secondPlace, "failure");
-            } else if (secondPlaceText === "right") {
-                secondPlace.style.border = "2px solid #9DD765";
-                addMiniIcon(secondPlace, "success");
-            }
-
-            if (thirdPlaceText !== "obtuse") {
-                thirdPlace.style.border = "2px solid #ED7777";
-                addMiniIcon(thirdPlace, "failure");
-            } else if (thirdPlaceText === "obtuse") {
-                thirdPlace.style.border = "2px solid #9DD765";
-                addMiniIcon(thirdPlace, "success");
-            }
-
-            if (fourthPlaceText !== "acute") {
-                fourthPlace.style.border = "2px solid #ED7777";
-                addMiniIcon(fourthPlace, "failure");
-            } else if (fourthPlaceText === "acute") {
-                fourthPlace.style.border = "2px solid #9DD765";
-                addMiniIcon(fourthPlace, "success");
-            }
-
-            if (fifthPlaceText !== "obtuse") {
-                fifthPlace.style.border = "2px solid #ED7777";
-                addMiniIcon(fifthPlace, "failure");
-            } else if (fifthPlaceText === "obtuse") {
-                fifthPlace.style.border = "2px solid #9DD765";
-                addMiniIcon(fifthPlace, "success");
-            }
-
             addImage(
                 "failure",
                 document.getElementsByClassName("question15"),
@@ -1318,7 +1293,7 @@ function question15() {
             // addCorrectAnswerQuestion15();
         }
     } else {
-        highlightingUnfillededBlocks(5, 15);
+        highlightUnselectedBlocks(4, 15, numbers15);
     }
 }
 
@@ -1586,7 +1561,7 @@ document.getElementById("submit").onclick = function () {
     // question12();
     question13();
     question14();
-    // question15();
+    question15();
     // question16();
     // question17();
     // question18();
