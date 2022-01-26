@@ -59,6 +59,47 @@ function drop3(e) {
     orignalElement.id = currentId;
 }
 
+// 4 QUESTION
+
+function drag4(e) {
+    localStorage.setItem("idOrigin4question5class", e.target.id);
+    localStorage.setItem("srcOrigin4question5class", e.target.dataset.src);
+    localStorage.setItem(
+        "classElemGrandparent4question5class",
+        e.target.parentElement.parentElement.className
+    );
+}
+
+function drop4(e) {
+    // получаем id взятого элемента
+    let idTakenElement = localStorage.getItem("idOrigin4question5class");
+    let srcOrig = localStorage.getItem("srcOrigin4question5class");
+    let srcOrig = localStorage.getItem("srcOrigin4question5class");
+
+    // берем id того элемента, на который положим несомый
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let currentElem = document.getElementById(currentId);
+    let orignalElem = document.getElementById(idTakenElement);
+
+    // создаём новый объект
+    let objectBeingCreated = document.createElement("img");
+    objectBeingCreated.src = "./pictures/4que/" + srcOrig + ".svg";
+    objectBeingCreated.style.marginTop = "10px";
+    objectBeingCreated.style.marginLeft = "10px";
+    objectBeingCreated.style.cursor = "grab";
+    objectBeingCreated.id = idTakenElement;
+
+    orignalElem.style.cursor = "default";
+    orignalElem.src = "./pictures/4que/emptyPlace.svg";
+    orignalElem.id = "";
+
+    if (topRow4)
+        // меняем поля местами
+        currentElem.appendChild(objectBeingCreated);
+}
+
 // 12 QUESTION
 
 function drag12(e) {
