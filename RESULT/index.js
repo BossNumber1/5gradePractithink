@@ -109,6 +109,12 @@ function addMiniIcon(elem, status) {
     }
 
     if (
+        elem.parentElement.parentElement.parentElement.className === "content13"
+    ) {
+        objDiv.style.marginTop = "-25px";
+    }
+
+    if (
         elem.parentElement.parentElement.parentElement.className === "content11"
     ) {
         objDiv.style.marginTop = "-25px";
@@ -1135,23 +1141,27 @@ let numbers13 = {
     secondNumber: "",
     thirdNumber: "",
     fourthNumber: "",
+    fifthNumber: "",
+    sixthNumber: "",
 };
 
-// gettingDataFromFields(
-//     4,
-//     ["10 1/2", "16 2/3", "18 1/5", "24 3/8"],
-//     13,
-//     numbers13
-// );
+gettingDataFromFields(
+    6,
+    ["17/12", "8/7", "2", "2", "11/8", "11/8"],
+    13,
+    numbers13
+);
 
 function question13() {
     if (
-        numbers13.firstNumber != "" &&
-        numbers13.secondNumber != "" &&
-        numbers13.thirdNumber != "" &&
-        numbers13.fourthNumber != ""
+        numbers13.firstNumber !== "" &&
+        numbers13.secondNumber !== "" &&
+        numbers13.thirdNumber !== "" &&
+        numbers13.fourthNumber !== "" &&
+        numbers13.fifthNumber !== "" &&
+        numbers13.sixthNumber !== ""
     ) {
-        succerrorAndCreateMiniIcon(4, 13, numbers13);
+        succerrorAndCreateMiniIcon(6, 13, numbers13);
 
         // выносим общий статус к номеру вопроса
 
@@ -1159,7 +1169,9 @@ function question13() {
             numbers13.firstNumber === "right" &&
             numbers13.secondNumber === "right" &&
             numbers13.thirdNumber === "right" &&
-            numbers13.fourthNumber === "right"
+            numbers13.fourthNumber === "right" &&
+            numbers13.fifthNumber === "right" &&
+            numbers13.sixthNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1178,7 +1190,7 @@ function question13() {
             // addCorrectAnswerQuestion13();
         }
     } else {
-        highlightUnselectedBlocks(4, 13, numbers13);
+        highlightUnselectedBlocks(6, 13, numbers13);
     }
 }
 
@@ -1585,7 +1597,7 @@ document.getElementById("submit").onclick = function () {
     // question10();
     question11();
     // question12();
-    // question13();
+    question13();
     // question14();
     // question15();
     // question16();
