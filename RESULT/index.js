@@ -73,7 +73,7 @@ function drag4(e) {
 function drop4(e) {
     // получаем id взятого элемента
     let idTakenElement = localStorage.getItem("idOrigin4question5class");
-    let srcOrig = localStorage.getItem("srcOrigin4question5class");
+    // let srcOrig = localStorage.getItem("srcOrigin4question5class");
     let srcOrig = localStorage.getItem("srcOrigin4question5class");
 
     // берем id того элемента, на который положим несомый
@@ -179,6 +179,195 @@ function drop17(e) {
     // меняем id местами
     currentElement.id = idOrig;
     orignalElement.id = currentId;
+}
+
+// ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
+
+function addCorrectAnswer(
+    numberCorrectAnswer,
+    numberQue,
+    numberContent,
+    numberContentCorrectAnswer
+) {
+    let newElement = document.createElement("div");
+    newElement.className = numberCorrectAnswer;
+
+    let childNewElement = document.createElement("div"); // сосед 1
+    childNewElement.className = "headerCorrectAnswer";
+    childNewElement.textContent = "Correct answer";
+
+    let secondChildNewElement = document.createElement("div"); // сосед 2
+    secondChildNewElement.className = numberContentCorrectAnswer;
+
+    let contentContent = document.createElement("img");
+    contentContent.src = "./pictures/" + numberQue + "/correctAnswer.svg";
+    contentContent.alt = "correct answer";
+
+    secondChildNewElement.appendChild(contentContent);
+
+    document.getElementsByClassName(numberContent)[0].appendChild(newElement);
+
+    document
+        .getElementsByClassName(numberCorrectAnswer)[0]
+        .appendChild(childNewElement);
+    document
+        .getElementsByClassName(numberCorrectAnswer)[0]
+        .appendChild(secondChildNewElement);
+}
+
+function addCorrectAnswerQuestion1() {
+    document.getElementsByClassName("app1")[0].style.height = "500px";
+    addCorrectAnswer("correctAnswer1", "1que", "app1", "contentCorrectAnswer1");
+}
+
+function addCorrectAnswerQuestion2() {
+    document.getElementsByClassName("app2")[0].style.height = "600px";
+    addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer2");
+}
+
+function addCorrectAnswerQuestion3() {
+    document.getElementsByClassName("app3")[0].style.height = "900px";
+    addCorrectAnswer("correctAnswer3", "3que", "app3", "contentCorrectAnswer3");
+}
+
+function addCorrectAnswerQuestion4() {
+    document.getElementsByClassName("app4")[0].style.height = "900px";
+    addCorrectAnswer("correctAnswer4", "4que", "app4", "contentCorrectAnswer4");
+}
+
+function addCorrectAnswerQuestion5() {
+    document.getElementsByClassName("app5")[0].style.height = "900px";
+    addCorrectAnswer("correctAnswer5", "5que", "app5", "contentCorrectAnswer5");
+}
+
+function addCorrectAnswerQuestion6() {
+    document.getElementsByClassName("app6")[0].style.height = "800px";
+    addCorrectAnswer("correctAnswer6", "6que", "app6", "contentCorrectAnswer6");
+}
+
+function addCorrectAnswerQuestion7() {
+    document.getElementsByClassName("app7")[0].style.height = "700px";
+    addCorrectAnswer("correctAnswer7", "7que", "app7", "contentCorrectAnswer7");
+}
+
+function addCorrectAnswerQuestion8() {
+    document.getElementsByClassName("app8")[0].style.height = "550px";
+    addCorrectAnswer("correctAnswer8", "8que", "app8", "contentCorrectAnswer8");
+}
+
+function addCorrectAnswerQuestion9() {
+    document.getElementsByClassName("app9")[0].style.height = "900px";
+    addCorrectAnswer("correctAnswer9", "9que", "app9", "contentCorrectAnswer9");
+}
+
+function addCorrectAnswerQuestion10() {
+    document.getElementsByClassName("app10")[0].style.height = "550px";
+    addCorrectAnswer(
+        "correctAnswer10",
+        "10que",
+        "app10",
+        "contentCorrectAnswer"
+    );
+}
+
+function addCorrectAnswerQuestion11() {
+    document.getElementsByClassName("app11")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer11",
+        "11que",
+        "app11",
+        "contentCorrectAnswer11"
+    );
+}
+
+function addCorrectAnswerQuestion12() {
+    document.getElementsByClassName("app12")[0].style.height = "900px";
+    addCorrectAnswer(
+        "correctAnswer12",
+        "12que",
+        "app12",
+        "contentCorrectAnswer12"
+    );
+}
+
+function addCorrectAnswerQuestion13() {
+    document.getElementsByClassName("app13")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer13",
+        "13que",
+        "app13",
+        "contentCorrectAnswer13"
+    );
+}
+
+function addCorrectAnswerQuestion14() {
+    document.getElementsByClassName("app14")[0].style.height = "500px";
+    addCorrectAnswer(
+        "correctAnswer14",
+        "14que",
+        "app14",
+        "contentCorrectAnswer"
+    );
+}
+
+function addCorrectAnswerQuestion15() {
+    document.getElementsByClassName("app15")[0].style.height = "1000px";
+    addCorrectAnswer(
+        "correctAnswer15",
+        "15que",
+        "app15",
+        "contentCorrectAnswer15"
+    );
+}
+
+function addCorrectAnswerQuestion16() {
+    document.getElementsByClassName("app16")[0].style.height = "1200px";
+    addCorrectAnswer(
+        "correctAnswer16",
+        "16que",
+        "app16",
+        "contentCorrectAnswer16"
+    );
+}
+
+function addCorrectAnswerQuestion17() {
+    document.getElementsByClassName("app17")[0].style.height = "650px";
+    addCorrectAnswer(
+        "correctAnswer17",
+        "17que",
+        "app17",
+        "contentCorrectAnswer"
+    );
+}
+
+function addCorrectAnswerQuestion18() {
+    document.getElementsByClassName("app18")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer18",
+        "18que",
+        "app18",
+        "contentCorrectAnswer"
+    );
+}
+
+function addCorrectAnswerQuestion19() {
+    document.getElementsByClassName("app19")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer19",
+        "19que",
+        "app19",
+        "contentCorrectAnswer"
+    );
+}
+
+function addCorrectAnswerQuestion20() {
+    document.getElementsByClassName("app20")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer20",
+        "20que",
+        "app20",
+        "contentCorrectAnswer"
+    );
 }
 
 // --------------------------------------------------------------------- validation of input fields ----------------------------------------------
@@ -753,7 +942,7 @@ function question1() {
                 1
             );
 
-            // addCorrectAnswerQuestion1();
+            addCorrectAnswerQuestion1();
         }
     } else {
         highlightUnselectedBlocks(4, 1, numbers1);
