@@ -75,18 +75,10 @@ function addMiniIcon(elem, status) {
     objDiv.style.width = widthAdjacentElement;
     objDiv.style.position = "absolute";
 
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content1"
-    ) {
-        objDiv.style.marginTop = "-40px";
+    if (elem.parentElement.parentElement.className === "content2") {
+        objDiv.style.marginTop = "-55px";
         objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 20 + "px";
-    } else if (
-        elem.parentElement.parentElement.parentElement.className === "content2"
-    ) {
-        objDiv.style.marginTop = "-15px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+            elem.offsetLeft + widthAdjacentElement / 2 - 197 + "px";
     } else if (
         elem.parentElement.parentElement.parentElement.className === "content3"
     ) {
@@ -616,27 +608,17 @@ function question1() {
 
 let numbers2 = {
     firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
 };
 
-// gettingDataFromFields(3, [320, 240, 400], 2, numbers2);
+gettingDataFromFields(1, [100], 2, numbers2);
 
 function question2() {
-    if (
-        numbers2.firstNumber != "" &&
-        numbers2.secondNumber != "" &&
-        numbers2.thirdNumber != ""
-    ) {
-        succerrorAndCreateMiniIcon(3, 2, numbers2);
+    if (numbers2.firstNumber != "") {
+        succerrorAndCreateMiniIcon(1, 2, numbers2);
 
         // выносим общий статус к номеру вопроса
 
-        if (
-            numbers2.firstNumber === "right" &&
-            numbers2.secondNumber === "right" &&
-            numbers2.thirdNumber === "right"
-        ) {
+        if (numbers2.firstNumber === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question2"),
@@ -654,7 +636,7 @@ function question2() {
             // addCorrectAnswerQuestion2();
         }
     } else {
-        highlightUnselectedBlocks(3, 2, numbers2);
+        highlightUnselectedBlocks(1, 2, numbers2);
     }
 }
 
@@ -1873,7 +1855,7 @@ function question20() {
 
 document.getElementById("submit").onclick = function () {
     question1();
-    // question2();
+    question2();
     // question3();
     // question4();
     // question5();
