@@ -14,6 +14,51 @@ function commonForNoselectedBtn(arrayBtnsId) {
     });
 }
 
+// ------------------------------------------------------------ ALL DRAG AND DROP -------------------------------------------------------------
+
+// common commands
+
+function allowDrop(e) {
+    e.preventDefault();
+}
+
+// 5 QUESTION
+
+function drag3(e) {
+    localStorage.setItem("idOrigin3question5class", e.target.id);
+    localStorage.setItem(
+        "textContent3question5class",
+        e.target.textContent.trim()
+    );
+}
+
+function drop3(e) {
+    // получаем текст и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin3question5class");
+    let textContent = localStorage.getItem("textContent3question5class");
+
+    // получаем id, на который кладём элемент
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orignalElement = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем блоки местами
+    currentElement.textContent = textContent;
+    currentElement.style.opacity = "1";
+    currentElement.style.color = "white";
+    currentElement.style.cursor = "grab";
+
+    orignalElement.textContent = "";
+    orignalElement.style.opacity = "0.3";
+    orignalElement.style.cursor = "default";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orignalElement.id = currentId;
+}
+
 // --------------------------------------------------------------------- validation of input fields ----------------------------------------------
 
 // -------------------------------------------------------------common function---------------------------------------------------
