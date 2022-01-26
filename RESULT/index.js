@@ -111,7 +111,9 @@ function addMiniIcon(elem, status) {
     if (
         elem.parentElement.parentElement.parentElement.className === "content11"
     ) {
-        objDiv.style.marginTop = "-40px";
+        objDiv.style.marginTop = "-25px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 23 + "px";
     }
 
     if (elem.parentElement.parentElement.className === "content14") {
@@ -1019,45 +1021,42 @@ function question10() {
 
 // 11 QUESTION
 
-function question11() {
-    let firstEmpty = document.getElementById("block1part1firstNumber11");
-    let secondEmpty = document.getElementById("block1part2firstNumber11");
-    let thirdEmpty = document.getElementById("block1part1secondNumber11");
-    let fourthEmpty = document.getElementById("block1part2secondNumber11");
-    let fifthEmpty = document.getElementById("block1part1thirdNumber11");
-    let sixthEmpty = document.getElementById("block1part2thirdNumber11");
-    let seventhEmpty = document.getElementById("block2part1firstNumber11");
-    let eighthEmpty = document.getElementById("block2part2firstNumber11");
-    let ninthEmpty = document.getElementById("block2part1secondNumber11");
-    let tenthEmpty = document.getElementById("block2part2secondNumber11");
-    let eleventhEmpty = document.getElementById("block2part1thirdNumber11");
-    let twelfthEmpty = document.getElementById("block2part2thirdNumber11");
+let numbers11 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+    fourthNumber: "",
+    fifthNumber: "",
+    sixthNumber: "",
+};
 
+gettingDataFromFields(
+    6,
+    ["1", "20/21", "3/10", "14/15", "8/5", "5/6"],
+    11,
+    numbers11
+);
+
+function question11() {
     if (
-        firstEmpty.value !== "" &&
-        thirdEmpty.value !== "" &&
-        fourthEmpty.value !== "" &&
-        fifthEmpty.value !== "" &&
-        sixthEmpty.value !== "" &&
-        seventhEmpty.value !== "" &&
-        eighthEmpty.value !== "" &&
-        ninthEmpty.value !== "" &&
-        tenthEmpty.value !== "" &&
-        eleventhEmpty.value !== "" &&
-        twelfthEmpty.value !== ""
+        numbers11.firstNumber !== "" &&
+        numbers11.secondNumber !== "" &&
+        numbers11.thirdNumber !== "" &&
+        numbers11.fourthNumber !== "" &&
+        numbers11.fifthNumber !== "" &&
+        numbers11.sixthNumber !== ""
     ) {
+        succerrorAndCreateMiniIcon(6, 11, numbers11);
+
+        // выносим общий статус к номеру вопроса
+
         if (
-            firstEmpty.value === "3" &&
-            thirdEmpty.value === "2" &&
-            fourthEmpty.value === "6" &&
-            fifthEmpty.value === "4" &&
-            sixthEmpty.value === "2" &&
-            seventhEmpty.value === "3" &&
-            eighthEmpty.value === "3" &&
-            ninthEmpty.value === "4" &&
-            tenthEmpty.value === "3" &&
-            eleventhEmpty.value === "2" &&
-            twelfthEmpty.value === "2"
+            numbers11.firstNumber === "right" &&
+            numbers11.secondNumber === "right" &&
+            numbers11.thirdNumber === "right" &&
+            numbers11.fourthNumber === "right" &&
+            numbers11.fifthNumber === "right" &&
+            numbers11.sixthNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1066,102 +1065,6 @@ function question11() {
                 11
             );
         } else {
-            if (firstEmpty.value !== "3") {
-                firstEmpty.style.border = "2px solid #ED7777";
-                firstEmpty.style.backgroundColor = "#ED7777";
-                firstEmpty.style.color = "white";
-
-                addMiniIcon(firstEmpty, "failure");
-            }
-
-            if (secondEmpty.value !== "") {
-                secondEmpty.style.border = "2px solid #ED7777";
-                secondEmpty.style.backgroundColor = "#ED7777";
-                secondEmpty.style.color = "white";
-
-                addMiniIcon(secondEmpty, "failure");
-            }
-
-            if (thirdEmpty.value !== "2") {
-                thirdEmpty.style.border = "2px solid #ED7777";
-                thirdEmpty.style.backgroundColor = "#ED7777";
-                thirdEmpty.style.color = "white";
-
-                addMiniIcon(thirdEmpty, "failure");
-            }
-
-            if (fourthEmpty.value !== "6") {
-                fourthEmpty.style.border = "2px solid #ED7777";
-                fourthEmpty.style.backgroundColor = "#ED7777";
-                fourthEmpty.style.color = "white";
-
-                addMiniIcon(fourthEmpty, "failure");
-            }
-
-            if (fifthEmpty.value !== "4") {
-                fifthEmpty.style.border = "2px solid #ED7777";
-                fifthEmpty.style.backgroundColor = "#ED7777";
-                fifthEmpty.style.color = "white";
-
-                addMiniIcon(fifthEmpty, "failure");
-            }
-
-            if (sixthEmpty.value !== "2") {
-                sixthEmpty.style.border = "2px solid #ED7777";
-                sixthEmpty.style.backgroundColor = "#ED7777";
-                sixthEmpty.style.color = "white";
-
-                addMiniIcon(sixthEmpty, "failure");
-            }
-
-            if (seventhEmpty.value !== "3") {
-                seventhEmpty.style.border = "2px solid #ED7777";
-                seventhEmpty.style.backgroundColor = "#ED7777";
-                seventhEmpty.style.color = "white";
-
-                addMiniIcon(seventhEmpty, "failure");
-            }
-
-            if (eighthEmpty.value !== "3") {
-                eighthEmpty.style.border = "2px solid #ED7777";
-                eighthEmpty.style.backgroundColor = "#ED7777";
-                eighthEmpty.style.color = "white";
-
-                addMiniIcon(eighthEmpty, "failure");
-            }
-
-            if (ninthEmpty.value !== "4") {
-                ninthEmpty.style.border = "2px solid #ED7777";
-                ninthEmpty.style.backgroundColor = "#ED7777";
-                ninthEmpty.style.color = "white";
-
-                addMiniIcon(ninthEmpty, "failure");
-            }
-
-            if (tenthEmpty.value !== "3") {
-                tenthEmpty.style.border = "2px solid #ED7777";
-                tenthEmpty.style.backgroundColor = "#ED7777";
-                tenthEmpty.style.color = "white";
-
-                addMiniIcon(tenthEmpty, "failure");
-            }
-
-            if (eleventhEmpty.value !== "2") {
-                eleventhEmpty.style.border = "2px solid #ED7777";
-                eleventhEmpty.style.backgroundColor = "#ED7777";
-                eleventhEmpty.style.color = "white";
-
-                addMiniIcon(eleventhEmpty, "failure");
-            }
-
-            if (twelfthEmpty.value !== "2") {
-                twelfthEmpty.style.border = "2px solid #ED7777";
-                twelfthEmpty.style.backgroundColor = "#ED7777";
-                twelfthEmpty.style.color = "white";
-
-                addMiniIcon(twelfthEmpty, "failure");
-            }
-
             addImage(
                 "failure",
                 document.getElementsByClassName("question11"),
@@ -1172,53 +1075,7 @@ function question11() {
             // addCorrectAnswerQuestion11();
         }
     } else {
-        if (firstEmpty.value === "") {
-            firstEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (secondEmpty.value === "") {
-            secondEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (thirdEmpty.value === "") {
-            thirdEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (fourthEmpty.value === "") {
-            fourthEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (fifthEmpty.value === "") {
-            fifthEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (sixthEmpty.value === "") {
-            sixthEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (seventhEmpty.value === "") {
-            seventhEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (eighthEmpty.value === "") {
-            eighthEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (ninthEmpty.value === "") {
-            ninthEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (tenthEmpty.value === "") {
-            tenthEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (eleventhEmpty.value === "") {
-            eleventhEmpty.style.border = "2px solid #FFB47D";
-        }
-
-        if (twelfthEmpty.value === "") {
-            twelfthEmpty.style.border = "2px solid #FFB47D";
-        }
+        highlightUnselectedBlocks(6, 11, numbers11);
     }
 }
 
@@ -1726,7 +1583,7 @@ document.getElementById("submit").onclick = function () {
     question8();
     question9();
     // question10();
-    // question11();
+    question11();
     // question12();
     // question13();
     // question14();
