@@ -22,7 +22,7 @@ function allowDrop(e) {
     e.preventDefault();
 }
 
-// 5 QUESTION
+// 3 QUESTION
 
 function drag3(e) {
     localStorage.setItem("idOrigin3question5class", e.target.id);
@@ -49,6 +49,44 @@ function drop3(e) {
     currentElement.style.opacity = "1";
     currentElement.style.color = "white";
     currentElement.style.cursor = "grab";
+
+    orignalElement.textContent = "";
+    orignalElement.style.opacity = "0.3";
+    orignalElement.style.cursor = "default";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orignalElement.id = currentId;
+}
+
+// 17 QUESTION
+
+function drag17(e) {
+    localStorage.setItem("idOrigin17question5class", e.target.id);
+    localStorage.setItem(
+        "textContent17question5class",
+        e.target.textContent.trim()
+    );
+}
+
+function drop17(e) {
+    // получаем текст и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin17question5class");
+    let textContent = localStorage.getItem("textContent17question5class");
+
+    // получаем id, на который кладём элемент
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orignalElement = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем блоки местами
+    currentElement.textContent = textContent;
+    currentElement.style.opacity = "1";
+    currentElement.style.color = "white";
+    currentElement.style.cursor = "grab";
+    currentElement.style.backgroundColor = "#369cb7";
 
     orignalElement.textContent = "";
     orignalElement.style.opacity = "0.3";
