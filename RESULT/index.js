@@ -801,29 +801,43 @@ let numbers7 = {
     fourthNumber: "",
 };
 
-// gettingDataFromFields(4, [4, 8, 3, 6], 7, numbers7);
+gettingDataFromFields(4, [0.15, 0.16, 0.42, 0.4], 7, numbers7);
 
 function question7() {
-    let firstEmpty = document.getElementsByClassName("firstEmpty7")[0];
-
     if (
-        numbers7.firstNumber !== "" &&
-        numbers7.secondNumber !== "" &&
-        numbers7.thirdNumber !== "" &&
-        numbers7.fourthNumber !== "" &&
-        firstEmpty.textContent !== ""
+        numbers7.firstNumber != "" &&
+        numbers7.secondNumber != "" &&
+        numbers7.thirdNumber != "" &&
+        numbers7.fourthNumber != ""
     ) {
+        succerror(
+            document.getElementById("firstNumber7"),
+            numbers7.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber7"),
+            numbers7.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber7"),
+            numbers7.thirdNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fourthNumber7"),
+            numbers7.fourthNumber === "wrong"
+        );
+
         // выносим общий статус к номеру вопроса
 
         if (
             numbers7.firstNumber === "right" &&
             numbers7.secondNumber === "right" &&
             numbers7.thirdNumber === "right" &&
-            numbers7.fourthNumber === "right" &&
-            firstEmpty.textContent === "="
+            numbers7.fourthNumber === "right"
         ) {
-            firstEmpty.style.backgroundColor = "#9DD765";
-
             addImage(
                 "success",
                 document.getElementsByClassName("question7"),
@@ -831,28 +845,6 @@ function question7() {
                 7
             );
         } else {
-            succerror(
-                document.getElementById("firstNumber7"),
-                numbers7.firstNumber === "wrong"
-            );
-
-            succerror(
-                document.getElementById("secondNumber7"),
-                numbers7.secondNumber === "wrong"
-            );
-
-            succerror(
-                document.getElementById("thirdNumber7"),
-                numbers7.thirdNumber === "wrong"
-            );
-
-            succerror(
-                document.getElementById("fourthNumber7"),
-                numbers7.fourthNumber === "wrong"
-            );
-
-            succerror(firstEmpty, firstEmpty.textContent !== "=");
-
             addImage(
                 "failure",
                 document.getElementsByClassName("question7"),
@@ -864,8 +856,6 @@ function question7() {
         }
     } else {
         highlightUnselectedBlocks(4, 7, numbers7);
-
-        firstEmpty.style.border = "2px solid #FFB47D";
     }
 }
 
@@ -1738,7 +1728,7 @@ document.getElementById("submit").onclick = function () {
     // question4();
     question5();
     question6();
-    // question7();
+    question7();
     // question8();
     // question9();
     // question10();
