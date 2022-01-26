@@ -434,7 +434,7 @@ function addMiniIcon(elem, status) {
     if (elem.parentElement.parentElement.className === "content2") {
         objDiv.style.marginTop = "-55px";
         objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 197 + "px";
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
     } else if (elem.parentElement.parentElement.className === "content6") {
         objDiv.style.marginTop = "-50px";
         objDiv.style.marginLeft =
@@ -978,7 +978,7 @@ function question2() {
                 2
             );
 
-            // addCorrectAnswerQuestion2();
+            addCorrectAnswerQuestion2();
         }
     } else {
         highlightUnselectedBlocks(1, 2, numbers2);

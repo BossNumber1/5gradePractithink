@@ -268,6 +268,10 @@ body {
     top: 100px;
 }
 
+.contentCorrectAnswer2 {
+    top: 20px;
+}
+
 .contentCorrectAnswer17 {
     top: 50px;
 }
@@ -278,7 +282,6 @@ body {
 
 .contentCorrectAnswer8,
 .contentCorrectAnswer7,
-.contentCorrectAnswer2,
 .contentCorrectAnswer10 {
     top: 60px;
 }
