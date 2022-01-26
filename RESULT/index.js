@@ -126,6 +126,10 @@ function addMiniIcon(elem, status) {
         objDiv.style.marginTop = "-55px";
     }
 
+    if (elem.parentElement.parentElement.className === "content16") {
+        objDiv.style.marginTop = "-25px";
+    }
+
     if (elem.parentElement.parentElement.className === "content21") {
         objDiv.style.marginTop = "-23px";
     }
@@ -152,16 +156,6 @@ function addMiniIcon(elem, status) {
     ) {
         objDiv.style.marginTop = "90px";
         objDiv.style.marginLeft = elem.offsetLeft - 100 + "px";
-    }
-
-    if (
-        elem.parentElement.firstElementChild.id === "secondNumber16" ||
-        elem.parentElement.firstElementChild.id === "thirdNumber16" ||
-        elem.parentElement.firstElementChild.id === "fourthNumber16" ||
-        elem.parentElement.firstElementChild.id === "fifthNumber16"
-    ) {
-        objDiv.style.marginTop = "100px";
-        objDiv.style.marginLeft = elem.offsetLeft - 110 + "px";
     }
 
     objDiv.style.marginRight = rightIndent;
@@ -1303,30 +1297,24 @@ let numbers16 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
-    fourthNumber: "",
-    fifthNumber: "",
 };
 
-// gettingDataFromFields(5, [828, 600, 90, 120, 18], 16, numbers16);
+gettingDataFromFields(3, [6.6, 292, 122.7], 16, numbers16);
 
 function question16() {
     if (
         numbers16.firstNumber != "" &&
         numbers16.secondNumber != "" &&
-        numbers16.thirdNumber != "" &&
-        numbers16.fourthNumber != "" &&
-        numbers16.fifthNumber != ""
+        numbers16.thirdNumber != ""
     ) {
-        succerrorAndCreateMiniIcon(5, 16, numbers16);
+        succerrorAndCreateMiniIcon(3, 16, numbers16);
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers16.firstNumber === "right" &&
             numbers16.secondNumber === "right" &&
-            numbers16.thirdNumber === "right" &&
-            numbers16.fourthNumber === "right" &&
-            numbers16.fifthNumber === "right"
+            numbers16.thirdNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1345,7 +1333,7 @@ function question16() {
             // addCorrectAnswerQuestion16();
         }
     } else {
-        highlightUnselectedBlocks(5, 16, numbers16);
+        highlightUnselectedBlocks(3, 16, numbers16);
     }
 }
 
@@ -1562,7 +1550,7 @@ document.getElementById("submit").onclick = function () {
     question13();
     question14();
     question15();
-    // question16();
+    question16();
     // question17();
     // question18();
     // question19();
