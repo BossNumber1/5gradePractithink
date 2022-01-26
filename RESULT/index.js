@@ -123,6 +123,14 @@ function addMiniIcon(elem, status) {
     }
 
     if (
+        elem.parentElement.parentElement.parentElement.className === "content8"
+    ) {
+        objDiv.style.marginTop = "-23px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 27 + "px";
+    }
+
+    if (
         elem.parentElement.parentElement.parentElement.parentElement
             .className === "content22"
     ) {
@@ -173,15 +181,7 @@ function addMiniIcon(elem, status) {
     objDiv.appendChild(obj);
 
     // устанавливаем её в нужное место
-    let elementParent = elem.parentElement;
-
-    if (
-        elem.parentElement.parentElement.parentElement.className !==
-            "content4" &&
-        elem.parentElement.parentElement.parentElement.className !== "content8"
-    ) {
-        elementParent.insertBefore(objDiv, elem);
-    }
+    elem.parentElement.insertBefore(objDiv, elem);
 }
 
 // делаем появление мини-иконок над областью проверки
@@ -868,11 +868,14 @@ let numbers8 = {
     fourthNumber: "",
     fifthNumber: "",
     sixthNumber: "",
-    seventhNumber: "",
-    eighthNumber: "",
 };
 
-// gettingDataFromFields(8, [2, 8, 1, 8, 2, 8, 5, 8], 8, numbers8);
+gettingDataFromFields(
+    6,
+    ["1/6", "1/6", "2/15", "1/8", "1/8", "1/9"],
+    8,
+    numbers8
+);
 
 function question8() {
     if (
@@ -881,11 +884,9 @@ function question8() {
         numbers8.thirdNumber !== "" &&
         numbers8.fourthNumber !== "" &&
         numbers8.fifthNumber !== "" &&
-        numbers8.sixthNumber !== "" &&
-        numbers8.seventhNumber !== "" &&
-        numbers8.eighthNumber !== ""
+        numbers8.sixthNumber !== ""
     ) {
-        succerrorAndCreateMiniIcon(8, 8, numbers8);
+        succerrorAndCreateMiniIcon(6, 8, numbers8);
 
         // выносим общий статус к номеру вопроса
 
@@ -895,9 +896,7 @@ function question8() {
             numbers8.thirdNumber === "right" &&
             numbers8.fourthNumber === "right" &&
             numbers8.fifthNumber === "right" &&
-            numbers8.sixthNumber === "right" &&
-            numbers8.seventhNumber === "right" &&
-            numbers8.eighthNumber === "right"
+            numbers8.sixthNumber === "right"
         ) {
             addImage(
                 "success",
@@ -916,7 +915,7 @@ function question8() {
             // addCorrectAnswerQuestion8();
         }
     } else {
-        highlightUnselectedBlocks(8, 8, numbers8);
+        highlightUnselectedBlocks(6, 8, numbers8);
     }
 }
 
@@ -1729,7 +1728,7 @@ document.getElementById("submit").onclick = function () {
     question5();
     question6();
     question7();
-    // question8();
+    question8();
     // question9();
     // question10();
     // question11();
