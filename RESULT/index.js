@@ -241,7 +241,7 @@ function addCorrectAnswerQuestion5() {
 }
 
 function addCorrectAnswerQuestion6() {
-    document.getElementsByClassName("app6")[0].style.height = "800px";
+    document.getElementsByClassName("app6")[0].style.height = "600px";
     addCorrectAnswer("correctAnswer6", "6que", "app6", "contentCorrectAnswer6");
 }
 
@@ -1145,7 +1145,7 @@ function question6() {
                 6
             );
 
-            // addCorrectAnswerQuestion6();
+            addCorrectAnswerQuestion6();
         }
     } else {
         highlightUnselectedBlocks(1, 6, numbers6);

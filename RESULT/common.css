@@ -272,6 +272,10 @@ body {
     top: 20px;
 }
 
+.contentCorrectAnswer6 {
+    top: 40px;
+}
+
 .contentCorrectAnswer17 {
     top: 50px;
 }
@@ -296,7 +300,6 @@ body {
     top: 200px;
 }
 
-.contentCorrectAnswer6,
 .contentCorrectAnswer14,
 .contentCorrectAnswer19 {
     top: 120px;
