@@ -341,12 +341,12 @@ function addCorrectAnswerQuestion17() {
 }
 
 function addCorrectAnswerQuestion18() {
-    document.getElementsByClassName("app18")[0].style.height = "700px";
+    document.getElementsByClassName("app18")[0].style.height = "500px";
     addCorrectAnswer(
         "correctAnswer18",
         "18que",
         "app18",
-        "contentCorrectAnswer"
+        "contentCorrectAnswer18"
     );
 }
 
@@ -1822,7 +1822,7 @@ function question18() {
                 18
             );
 
-            // addCorrectAnswerQuestion18();
+            addCorrectAnswerQuestion18();
         }
     } else {
         highlightUnselectedBlocks(4, 18, numbers18);
