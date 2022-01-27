@@ -331,7 +331,7 @@ function addCorrectAnswerQuestion16() {
 }
 
 function addCorrectAnswerQuestion17() {
-    document.getElementsByClassName("app17")[0].style.height = "650px";
+    document.getElementsByClassName("app17")[0].style.height = "500px";
     addCorrectAnswer(
         "correctAnswer17",
         "17que",
@@ -1705,36 +1705,14 @@ function question16() {
 
 // 17 QUESTION
 
-let numbers17 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-};
-
-// gettingDataFromFields(4, [8, 12, 3, 4], 17, numbers17);
-
 function question17() {
-    let firstEmpty = document.getElementsByClassName("firstEmpty17")[0];
+    // получаем содежимое блоков
+    let topRow17 =
+        document.getElementsByClassName("topRow17")[0].children[1].id;
 
-    if (
-        numbers17.firstNumber !== "" &&
-        numbers17.secondNumber !== "" &&
-        numbers17.thirdNumber !== "" &&
-        numbers17.fourthNumber !== "" &&
-        firstEmpty.textContent !== ""
-    ) {
-        // выносим общий статус к номеру вопроса
-
-        if (
-            numbers17.firstNumber === "right" &&
-            numbers17.secondNumber === "right" &&
-            numbers17.thirdNumber === "right" &&
-            numbers17.fourthNumber === "right" &&
-            firstEmpty.textContent === "<"
-        ) {
-            firstEmpty.style.backgroundColor = "#9DD765";
-
+    if (topRow17 !== "firstEmpty17") {
+        // проверяем на верность для создания статуса
+        if (topRow17 === "firstBtn17") {
             addImage(
                 "success",
                 document.getElementsByClassName("question17"),
@@ -1742,27 +1720,9 @@ function question17() {
                 17
             );
         } else {
-            succerror(
-                document.getElementById("firstNumber17"),
-                numbers17.firstNumber === "wrong"
-            );
-
-            succerror(
-                document.getElementById("secondNumber17"),
-                numbers17.secondNumber === "wrong"
-            );
-
-            succerror(
-                document.getElementById("thirdNumber17"),
-                numbers17.thirdNumber === "wrong"
-            );
-
-            succerror(
-                document.getElementById("fourthNumber17"),
-                numbers17.fourthNumber === "wrong"
-            );
-
-            succerror(firstEmpty, firstEmpty.textContent !== "<");
+            document.getElementsByClassName(
+                "topRow17"
+            )[0].children[1].style.border = "2px solid #ED7777";
 
             addImage(
                 "failure",
@@ -1771,12 +1731,10 @@ function question17() {
                 17
             );
 
-            // addCorrectAnswerQuestion17();
+            addCorrectAnswerQuestion17();
         }
     } else {
-        highlightUnselectedBlocks(4, 17, numbers17);
-
-        firstEmpty.style.border = "2px solid #FFB47D";
+        highlightingUnfillededBlocks(1, 17);
     }
 }
 
@@ -1930,7 +1888,7 @@ document.getElementById("submit").onclick = function () {
     question14();
     question15();
     question16();
-    // question17();
+    question17();
     question18();
     question19();
     question20();
