@@ -366,7 +366,7 @@ function addCorrectAnswerQuestion20() {
         "correctAnswer20",
         "20que",
         "app20",
-        "contentCorrectAnswer"
+        "contentCorrectAnswer20"
     );
 }
 
@@ -1904,7 +1904,7 @@ function question20() {
                 20
             );
 
-            // addCorrectAnswerQuestion20();
+            addCorrectAnswerQuestion20();
         }
     } else {
         highlightUnselectedBlocks(3, 20, numbers20);
