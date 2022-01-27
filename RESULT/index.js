@@ -281,7 +281,7 @@ function addCorrectAnswerQuestion11() {
 }
 
 function addCorrectAnswerQuestion12() {
-    document.getElementsByClassName("app12")[0].style.height = "900px";
+    document.getElementsByClassName("app12")[0].style.height = "700px";
     addCorrectAnswer(
         "correctAnswer12",
         "12que",
@@ -1447,31 +1447,29 @@ function question11() {
 
 // 12 QUESTION
 
-let numbers12 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-};
-
-// gettingDataFromFields(4, [1215, 1000, 200, 15], 12, numbers12);
-
 function question12() {
+    // получаем содежимое блоков
+    let firstPlace12 =
+        document.getElementsByClassName("places12")[0].children[0].id;
+    let secondPlace12 =
+        document.getElementsByClassName("places12")[0].children[1].id;
+    let thirdPlace12 =
+        document.getElementsByClassName("places12")[0].children[2].id;
+    let fourthPlace12 =
+        document.getElementsByClassName("places12")[0].children[3].id;
+
     if (
-        numbers12.firstNumber != "" &&
-        numbers12.secondNumber != "" &&
-        numbers12.thirdNumber != "" &&
-        numbers12.fourthNumber != ""
+        firstPlace12 !== "firstEmpty12" &&
+        secondPlace12 !== "secondEmpty12" &&
+        thirdPlace12 !== "thirdEmpty12" &&
+        fourthPlace12 !== "fourthEmpty12"
     ) {
-        succerrorAndCreateMiniIcon(4, 12, numbers12);
-
-        // выносим общий статус к номеру вопроса
-
+        // проверяем на верность для создания статуса
         if (
-            numbers12.firstNumber === "right" &&
-            numbers12.secondNumber === "right" &&
-            numbers12.thirdNumber === "right" &&
-            numbers12.fourthNumber === "right"
+            firstPlace12 === "secondBtn12" &&
+            secondPlace12 === "fourthBtn12" &&
+            thirdPlace12 === "firstBtn12" &&
+            fourthPlace12 === "thirdBtn12"
         ) {
             addImage(
                 "success",
@@ -1480,6 +1478,54 @@ function question12() {
                 12
             );
         } else {
+            if (firstPlace12 !== "secondBtn12") {
+                document.getElementById(firstPlace12).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(firstPlace12), "failure");
+            } else if (firstPlace12 === "secondBtn12") {
+                document.getElementById(firstPlace12).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(firstPlace12), "success");
+            }
+
+            if (secondPlace12 !== "fourthBtn12") {
+                document.getElementById(secondPlace12).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(secondPlace12), "failure");
+            } else if (secondPlace12 === "fourthBtn12") {
+                document.getElementById(secondPlace12).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(secondPlace12), "success");
+            }
+
+            if (thirdPlace12 !== "firstBtn12") {
+                document.getElementById(thirdPlace12).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(thirdPlace12), "failure");
+            } else if (thirdPlace12 === "firstBtn12") {
+                document.getElementById(thirdPlace12).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(thirdPlace12), "success");
+            }
+
+            if (fourthPlace12 !== "thirdBtn12") {
+                document.getElementById(fourthPlace12).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(fourthPlace12), "failure");
+            } else if (fourthPlace12 === "thirdBtn12") {
+                document.getElementById(fourthPlace12).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(fourthPlace12), "success");
+            }
+
             addImage(
                 "failure",
                 document.getElementsByClassName("question12"),
@@ -1487,10 +1533,10 @@ function question12() {
                 12
             );
 
-            // addCorrectAnswerQuestion12();
+            addCorrectAnswerQuestion12();
         }
     } else {
-        highlightUnselectedBlocks(4, 12, numbers12);
+        highlightingUnfillededBlocks(4, 12);
     }
 }
 
@@ -1883,7 +1929,7 @@ document.getElementById("submit").onclick = function () {
     question9();
     // question10();
     question11();
-    // question12();
+    question12();
     question13();
     question14();
     question15();

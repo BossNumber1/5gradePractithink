@@ -299,7 +299,10 @@ body {
     top: 70px;
 }
 
-.contentCorrectAnswer12,
+.contentCorrectAnswer12 {
+    top: 40px;
+}
+
 .contentCorrectAnswer4,
 .contentCorrectAnswer3 {
     top: 160px;
