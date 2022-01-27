@@ -987,28 +987,45 @@ function question2() {
 
 // 3 QUESTION
 
-let numbers3 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-};
-
-// gettingDataFromFields(3, [52, 40, 12], 3, numbers3);
-
 function question3() {
+    let firstRow3p1 =
+        document.getElementsByClassName("leftColumn3")[0].children[0];
+    let secondRow3p1 =
+        document.getElementsByClassName("leftColumn3")[0].children[1];
+    let thirdRow3p1 =
+        document.getElementsByClassName("leftColumn3")[0].children[2];
+
+    let firstRow3p2 =
+        document.getElementsByClassName("rightColumn3")[0].children[0];
+    let secondRow3p2 =
+        document.getElementsByClassName("rightColumn3")[0].children[1];
+    let thirdRow3p2 =
+        document.getElementsByClassName("rightColumn3")[0].children[2];
+
+    // получаем содежимое блоков
+    let firstRow3 = firstRow3p1.children[1].id;
+    let secondRow3 = secondRow3p1.children[0].id;
+    let thirdRow3 = thirdRow3p1.children[1].id;
+    let fourthRow3 = firstRow3p2.children[0].id;
+    let fifthRow3 = secondRow3p2.children[1].id;
+    let sixthRow3 = thirdRow3p2.children[1].id;
+
     if (
-        numbers3.firstNumber != "" &&
-        numbers3.secondNumber != "" &&
-        numbers3.thirdNumber != ""
+        firstRow3 !== "firstEmpty3" &&
+        secondRow3 !== "secondEmpty3" &&
+        thirdRow3 !== "thirdEmpty3" &&
+        fourthRow3 !== "fourthEmpty3" &&
+        fifthRow3 !== "fifthEmpty3" &&
+        sixthRow3 !== "sixthEmpty3"
     ) {
-        succerrorAndCreateMiniIcon(3, 3, numbers3);
-
-        // выносим общий статус к номеру вопроса
-
+        // проверяем на верность для создания статуса
         if (
-            numbers3.firstNumber === "right" &&
-            numbers3.secondNumber === "right" &&
-            numbers3.thirdNumber === "right"
+            firstRow3 === "firstBtn3" &&
+            secondRow3 === "fourthBtn3" &&
+            thirdRow3 === "thirdBtn3" &&
+            fourthRow3 === "sixthBtn3" &&
+            fifthRow3 === "fifthBtn3" &&
+            sixthRow3 === "secondBtn3"
         ) {
             addImage(
                 "success",
@@ -1017,6 +1034,44 @@ function question3() {
                 3
             );
         } else {
+            if (firstRow3 !== "firstBtn3") {
+                document.getElementById(firstRow3).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(firstRow3), "failure");
+            }
+
+            if (secondRow3 !== "fourthBtn3") {
+                document.getElementById(secondRow3).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(secondRow3), "failure");
+            }
+
+            if (thirdRow3 !== "thirdBtn3") {
+                document.getElementById(thirdRow3).style.border =
+                    "2px solid #ED7777";
+                addMiniIcon(document.getElementById(thirdRow3), "failure");
+            }
+
+            if (fourthRow3 !== "sixthBtn3") {
+                document.getElementById(fourthRow3).style.border =
+                    "2px solid #ED7777";
+                addMiniIcon(document.getElementById(fourthRow3), "failure");
+            }
+
+            if (fifthRow3 !== "fifthBtn3") {
+                document.getElementById(fifthRow3).style.border =
+                    "2px solid #ED7777";
+                addMiniIcon(document.getElementById(fifthRow3), "failure");
+            }
+
+            if (sixthRow3 !== "secondBtn3") {
+                document.getElementById(sixthRow3).style.border =
+                    "2px solid #ED7777";
+                addMiniIcon(document.getElementById(sixthRow3), "failure");
+            }
+
             addImage(
                 "failure",
                 document.getElementsByClassName("question3"),
@@ -1024,10 +1079,10 @@ function question3() {
                 3
             );
 
-            // addCorrectAnswerQuestion3();
+            addCorrectAnswerQuestion3();
         }
     } else {
-        highlightUnselectedBlocks(3, 3, numbers3);
+        highlightingUnfillededBlocks(6, 3);
     }
 }
 
@@ -1920,7 +1975,7 @@ function question20() {
 document.getElementById("submit").onclick = function () {
     question1();
     question2();
-    // question3();
+    question3();
     // question4();
     question5();
     question6();
