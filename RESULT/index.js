@@ -1088,51 +1088,103 @@ function question3() {
 
 // 4 QUESTION
 
-let numbers4 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-};
-
-// gettingDataFromFields(4, [12, 28, 40, 44], 4, numbers4);
-
 function question4() {
-    if (
-        numbers4.firstNumber != "" &&
-        numbers4.secondNumber != "" &&
-        numbers4.thirdNumber != "" &&
-        numbers4.fourthNumber != ""
-    ) {
-        succerrorAndCreateMiniIcon(4, 4, numbers4);
+    // получаем содержимое корзин
 
-        // выносим общий статус к номеру вопроса
+    let contentBasketFirst = document.getElementById("firstBasket4").children;
 
-        if (
-            numbers4.firstNumber === "right" &&
-            numbers4.secondNumber === "right" &&
-            numbers4.thirdNumber === "right" &&
-            numbers4.fourthNumber === "right"
-        ) {
-            addImage(
-                "success",
-                document.getElementsByClassName("question4"),
-                "app4",
-                4
-            );
-        } else {
-            addImage(
-                "failure",
-                document.getElementsByClassName("question4"),
-                "app4",
-                4
-            );
+    // let contentBasketTrue = document.getElementById(
+    //     "placeOfDroppingFigures4true"
+    // ).children;
 
-            // addCorrectAnswerQuestion4();
-        }
-    } else {
-        highlightUnselectedBlocks(4, 4, numbers4);
-    }
+    // let contentBasketFalse = document.getElementById(
+    //     "placeOfDroppingFigures4false"
+    // ).children;
+
+    // // проверяем на пустоту
+    // if (contentBasketTrue.length > 0 && contentBasketFalse.length > 0) {
+    //     let correctOrderBasketTrue = [
+    //             "firstBtn",
+    //             "secondBtn",
+    //             "thirdBtn",
+    //             "sixthBtn",
+    //             "seventhBtn",
+    //         ],
+    //         correctOrderBasketFalse = ["fourthBtn", "fifthBtn"],
+    //         theBasketTrueIsFilledCorrectly = "yes",
+    //         theBasketFalseIsFilledCorrectly = "yes";
+
+    //     // раскрашиваем блоки
+    //     for (let i = 0; i < contentBasketTrue.length; i++) {
+    //         let id = contentBasketTrue[i].id;
+
+    //         succerror(
+    //             document.getElementById(id),
+    //             correctOrderBasketTrue.includes(id) === false
+    //         );
+
+    //         document.getElementById(id).style.borderRadius = "5px";
+
+    //         if (correctOrderBasketTrue.includes(id) === false) {
+    //             theBasketTrueIsFilledCorrectly = "no";
+    //         }
+    //     }
+
+    //     for (let i = 0; i < contentBasketFalse.length; i++) {
+    //         let id = contentBasketFalse[i].id;
+
+    //         succerror(
+    //             document.getElementById(id),
+    //             correctOrderBasketFalse.includes(id) === false
+    //         );
+
+    //         document.getElementById(id).style.borderRadius = "5px";
+
+    //         if (correctOrderBasketFalse.includes(id) === false) {
+    //             theBasketFalseIsFilledCorrectly = "no";
+    //         }
+    //     }
+
+    //     // проверяем на верность для создания статуса
+    //     if (
+    //         theBasketTrueIsFilledCorrectly === "yes" &&
+    //         theBasketFalseIsFilledCorrectly === "yes"
+    //     ) {
+    //         addImage(
+    //             "success",
+    //             document.getElementsByClassName("question7"),
+    //             "app7",
+    //             7
+    //         );
+    //     } else {
+    //         addImage(
+    //             "failure",
+    //             document.getElementsByClassName("question7"),
+    //             "app7",
+    //             7
+    //         );
+
+    //         addCorrectAnswerQuestion7();
+    //     }
+    // } else if (
+    //     contentBasketTrue.length === 0 &&
+    //     contentBasketFalse.length > 0
+    // ) {
+    //     document.getElementsByClassName("true")[0].style.border =
+    //         "2px solid #FFB47D";
+    // } else if (
+    //     contentBasketFalse.length === 0 &&
+    //     contentBasketTrue.length > 0
+    // ) {
+    //     document.getElementsByClassName("false")[0].style.border =
+    //         "2px solid #FFB47D";
+    // } else {
+    //     document.getElementsByClassName("true")[0].style.border =
+    //         "2px solid #FFB47D";
+
+    //     document.getElementsByClassName("false")[0].style.border =
+    //         "2px solid #FFB47D";
+    // }
 }
 
 // 5 QUESTION
