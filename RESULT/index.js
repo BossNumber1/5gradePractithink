@@ -104,7 +104,8 @@ function drop4(e) {
 
     if (
         classElemGrandparent != "basket4first" ||
-        classElemGrandparent != "basket4second"
+        classElemGrandparent != "basket4second" ||
+        classElemGrandparent != "basket4third"
     ) {
         orignalElem.style.opacity = "0.5";
         orignalElem.textContent = "";
@@ -115,7 +116,8 @@ function drop4(e) {
 
     if (
         classElemGrandparent == "basket4first" ||
-        classElemGrandparent == "basket4second"
+        classElemGrandparent == "basket4second" ||
+        classElemGrandparent == "basket4third"
     ) {
         e.target.style.opacity = "1";
         e.target.textContent = textElem;
