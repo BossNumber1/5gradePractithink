@@ -60,7 +60,9 @@
     justify-content: space-between;
 }
 
-.basket4 {
+.basket4first,
+.basket4second,
+.basket4third {
     width: 270px;
     height: 179px;
     border: 1px solid #d0d0d0;
@@ -87,4 +89,30 @@
     line-height: 20px;
     text-align: center;
     color: #ffffff;
+}
+
+.expression4 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background: #369cb7;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    /* below text styles */
+
+    position: static;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.expression4 {
+    width: 80px;
 }

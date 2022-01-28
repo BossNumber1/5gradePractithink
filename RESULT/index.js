@@ -59,45 +59,71 @@ function drop3(e) {
     orignalElement.id = currentId;
 }
 
-// 4 QUESTION
+// 7 QUESTION
 
 function drag4(e) {
     localStorage.setItem("idOrigin4question5class", e.target.id);
-    localStorage.setItem("srcOrigin4question5class", e.target.dataset.src);
     localStorage.setItem(
-        "classElemGrandparent4question5class",
-        e.target.parentElement.parentElement.className
+        "classElemGrandparent4",
+        e.target.parentElement.className
     );
+    localStorage.setItem("positionElem4", e.target.dataset.position);
+    localStorage.setItem("textElem4", e.target.dataset.text);
+    localStorage.setItem("classElem4", e.target.dataset.class);
 }
 
 function drop4(e) {
-    // получаем id взятого элемента
+    // получаем id несомого элемента и класс прародителя
+    let classElemGrandparent = localStorage.getItem("classElemGrandparent4");
     let idTakenElement = localStorage.getItem("idOrigin4question5class");
-    // let srcOrig = localStorage.getItem("srcOrigin4question5class");
-    let srcOrig = localStorage.getItem("srcOrigin4question5class");
+    let positionElem = localStorage.getItem("positionElem4");
+    let classElem = localStorage.getItem("classElem4");
+    let textElem = localStorage.getItem("textElem4");
+    let objectName = idTakenElement.slice(0, -1);
 
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
 
     // получаем объекты
-    let currentElem = document.getElementById(currentId);
     let orignalElem = document.getElementById(idTakenElement);
+    let currentElem = document.getElementById(currentId);
 
     // создаём новый объект
-    let objectBeingCreated = document.createElement("img");
-    objectBeingCreated.src = "./pictures/4que/" + srcOrig + ".svg";
-    objectBeingCreated.style.marginTop = "10px";
-    objectBeingCreated.style.marginLeft = "10px";
+    let objectBeingCreated = document.createElement("div");
+    objectBeingCreated.textContent = textElem;
+    objectBeingCreated.className = classElem;
+    objectBeingCreated.setAttribute("draggable", true);
+    objectBeingCreated.setAttribute("data-text", textElem);
+    objectBeingCreated.id = objectName;
+    objectBeingCreated.setAttribute("data-position", positionElem);
+    objectBeingCreated.alt = idTakenElement;
     objectBeingCreated.style.cursor = "grab";
-    objectBeingCreated.id = idTakenElement;
 
-    orignalElem.style.cursor = "default";
-    orignalElem.src = "./pictures/4que/emptyPlace.svg";
-    orignalElem.id = "";
+    // меняем поля местами
+    currentElem.appendChild(objectBeingCreated);
 
-    if (topRow4)
-        // меняем поля местами
-        currentElem.appendChild(objectBeingCreated);
+    if (
+        classElemGrandparent != "basket4first" ||
+        classElemGrandparent != "basket4second"
+    ) {
+        orignalElem.style.opacity = "0.5";
+        orignalElem.textContent = "";
+        orignalElem.style.cursor = "default";
+
+        orignalElem.id = "forClear";
+    }
+
+    if (
+        classElemGrandparent == "basket4first" ||
+        classElemGrandparent == "basket4second"
+    ) {
+        e.target.style.opacity = "1";
+        e.target.textContent = textElem;
+        e.target.id = idTakenElement + "4";
+        e.target.style.cursor = "grab";
+
+        document.getElementById("forClear").remove();
+    }
 }
 
 // 12 QUESTION
