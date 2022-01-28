@@ -1118,101 +1118,140 @@ function question3() {
 
 function question4() {
     // получаем содержимое корзин
+    // let contentBasketFirst = document.getElementById("firstBasket4").children;
 
-    let contentBasketFirst = document.getElementById("firstBasket4").children;
+    let contentBasketTrue = document.getElementById("firstBasket4").children;
+    let contentBasketFalse = document.getElementById("secondBasket4").children;
+    let contentBasketThird = document.getElementById("thirdBasket4").children;
 
-    // let contentBasketTrue = document.getElementById(
-    //     "placeOfDroppingFigures4true"
-    // ).children;
+    // проверяем на пустоту
+    if (
+        contentBasketTrue.length > 1 &&
+        contentBasketFalse.length > 1 &&
+        contentBasketThird.length > 1
+    ) {
+        let correctOrderBasketTrue = [
+                "headerBasket4first",
+                "firstExpression4",
+                "secondExpression4",
+            ],
+            correctOrderBasketFalse = [
+                "headerBasket4second",
+                "thirdExpression4",
+                "fourthExpression4",
+            ],
+            correctOrderBasketThird = [
+                "headerBasket4third",
+                "fifthExpression4",
+                "sixthExpression4",
+            ],
+            theBasketTrueIsFilledCorrectly = "yes",
+            theBasketFalseIsFilledCorrectly = "yes",
+            theBasketThirdIsFilledCorrectly = "yes";
 
-    // let contentBasketFalse = document.getElementById(
-    //     "placeOfDroppingFigures4false"
-    // ).children;
+        // раскрашиваем блоки
+        for (let i = 0; i < contentBasketTrue.length; i++) {
+            let id = contentBasketTrue[i].id;
 
-    // // проверяем на пустоту
-    // if (contentBasketTrue.length > 0 && contentBasketFalse.length > 0) {
-    //     let correctOrderBasketTrue = [
-    //             "firstBtn",
-    //             "secondBtn",
-    //             "thirdBtn",
-    //             "sixthBtn",
-    //             "seventhBtn",
-    //         ],
-    //         correctOrderBasketFalse = ["fourthBtn", "fifthBtn"],
-    //         theBasketTrueIsFilledCorrectly = "yes",
-    //         theBasketFalseIsFilledCorrectly = "yes";
+            succerror(
+                document.getElementById(id),
+                correctOrderBasketTrue.includes(id) === false
+            );
 
-    //     // раскрашиваем блоки
-    //     for (let i = 0; i < contentBasketTrue.length; i++) {
-    //         let id = contentBasketTrue[i].id;
+            document.getElementById(id).style.borderRadius = "5px";
 
-    //         succerror(
-    //             document.getElementById(id),
-    //             correctOrderBasketTrue.includes(id) === false
-    //         );
+            if (correctOrderBasketTrue.includes(id) === false) {
+                theBasketTrueIsFilledCorrectly = "no";
+            }
+        }
 
-    //         document.getElementById(id).style.borderRadius = "5px";
+        for (let i = 0; i < contentBasketFalse.length; i++) {
+            let id = contentBasketFalse[i].id;
 
-    //         if (correctOrderBasketTrue.includes(id) === false) {
-    //             theBasketTrueIsFilledCorrectly = "no";
-    //         }
-    //     }
+            succerror(
+                document.getElementById(id),
+                correctOrderBasketFalse.includes(id) === false
+            );
 
-    //     for (let i = 0; i < contentBasketFalse.length; i++) {
-    //         let id = contentBasketFalse[i].id;
+            document.getElementById(id).style.borderRadius = "5px";
 
-    //         succerror(
-    //             document.getElementById(id),
-    //             correctOrderBasketFalse.includes(id) === false
-    //         );
+            if (correctOrderBasketFalse.includes(id) === false) {
+                theBasketFalseIsFilledCorrectly = "no";
+            }
+        }
 
-    //         document.getElementById(id).style.borderRadius = "5px";
+        for (let i = 0; i < contentBasketThird.length; i++) {
+            let id = contentBasketThird[i].id;
 
-    //         if (correctOrderBasketFalse.includes(id) === false) {
-    //             theBasketFalseIsFilledCorrectly = "no";
-    //         }
-    //     }
+            succerror(
+                document.getElementById(id),
+                correctOrderBasketThird.includes(id) === false
+            );
 
-    //     // проверяем на верность для создания статуса
-    //     if (
-    //         theBasketTrueIsFilledCorrectly === "yes" &&
-    //         theBasketFalseIsFilledCorrectly === "yes"
-    //     ) {
-    //         addImage(
-    //             "success",
-    //             document.getElementsByClassName("question7"),
-    //             "app7",
-    //             7
-    //         );
-    //     } else {
-    //         addImage(
-    //             "failure",
-    //             document.getElementsByClassName("question7"),
-    //             "app7",
-    //             7
-    //         );
+            document.getElementById(id).style.borderRadius = "5px";
 
-    //         addCorrectAnswerQuestion7();
-    //     }
-    // } else if (
-    //     contentBasketTrue.length === 0 &&
-    //     contentBasketFalse.length > 0
-    // ) {
-    //     document.getElementsByClassName("true")[0].style.border =
-    //         "2px solid #FFB47D";
-    // } else if (
-    //     contentBasketFalse.length === 0 &&
-    //     contentBasketTrue.length > 0
-    // ) {
-    //     document.getElementsByClassName("false")[0].style.border =
-    //         "2px solid #FFB47D";
-    // } else {
-    //     document.getElementsByClassName("true")[0].style.border =
-    //         "2px solid #FFB47D";
+            if (correctOrderBasketThird.includes(id) === false) {
+                theBasketThirdIsFilledCorrectly = "no";
+            }
+        }
 
-    //     document.getElementsByClassName("false")[0].style.border =
-    //         "2px solid #FFB47D";
-    // }
+        // проверяем на верность для создания статуса
+        if (
+            theBasketTrueIsFilledCorrectly === "yes" &&
+            theBasketFalseIsFilledCorrectly === "yes" &&
+            theBasketThirdIsFilledCorrectly === "yes"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
+
+            // addCorrectAnswerQuestion4();
+        }
+    } else if (
+        contentBasketTrue.length === 1 &&
+        contentBasketThird.length === 1 &&
+        contentBasketFalse.length > 1
+    ) {
+        document.getElementsByClassName("basket4first")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("basket4third")[0].style.border =
+            "2px solid #FFB47D";
+    } else if (
+        contentBasketFalse.length === 1 &&
+        contentBasketTrue.length === 1 &&
+        contentBasketThird.length > 1
+    ) {
+        document.getElementsByClassName("basket4second")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("basket4true")[0].style.border =
+            "2px solid #FFB47D";
+    } else if (
+        contentBasketFalse.length === 1 &&
+        contentBasketThird.length === 1 &&
+        contentBasketTrue.length > 1
+    ) {
+        document.getElementsByClassName("basket4second")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("basket4third")[0].style.border =
+            "2px solid #FFB47D";
+    } else {
+        document.getElementsByClassName("basket4first")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("basket4second")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("basket4third")[0].style.border =
+            "2px solid #FFB47D";
+    }
 }
 
 // 5 QUESTION
@@ -2056,7 +2095,7 @@ document.getElementById("submit").onclick = function () {
     question1();
     question2();
     question3();
-    // question4();
+    question4();
     question5();
     question6();
     question7();
