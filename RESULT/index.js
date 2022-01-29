@@ -240,7 +240,7 @@ function addCorrectAnswerQuestion3() {
 }
 
 function addCorrectAnswerQuestion4() {
-    document.getElementsByClassName("app4")[0].style.height = "900px";
+    document.getElementsByClassName("app4")[0].style.height = "850px";
     addCorrectAnswer("correctAnswer4", "4que", "app4", "contentCorrectAnswer4");
 }
 
@@ -1113,25 +1113,25 @@ function question4() {
     ) {
         let correctOrderBasketTrue = [
                 "headerBasket4first",
-                "firstExpression4",
-                "secondExpression4",
+                "expression24",
+                "expression54",
             ],
             correctOrderBasketFalse = [
                 "headerBasket4second",
-                "thirdExpression4",
-                "fourthExpression4",
+                "expression34",
+                "expression44",
             ],
             correctOrderBasketThird = [
                 "headerBasket4third",
-                "fifthExpression4",
-                "sixthExpression4",
+                "expression14",
+                "expression64",
             ],
             theBasketTrueIsFilledCorrectly = "yes",
             theBasketFalseIsFilledCorrectly = "yes",
             theBasketThirdIsFilledCorrectly = "yes";
 
         // раскрашиваем блоки
-        for (let i = 0; i < contentBasketTrue.length; i++) {
+        for (let i = 1; i < contentBasketTrue.length; i++) {
             let id = contentBasketTrue[i].id;
 
             succerror(
@@ -1146,7 +1146,7 @@ function question4() {
             }
         }
 
-        for (let i = 0; i < contentBasketFalse.length; i++) {
+        for (let i = 1; i < contentBasketFalse.length; i++) {
             let id = contentBasketFalse[i].id;
 
             succerror(
@@ -1161,7 +1161,7 @@ function question4() {
             }
         }
 
-        for (let i = 0; i < contentBasketThird.length; i++) {
+        for (let i = 1; i < contentBasketThird.length; i++) {
             let id = contentBasketThird[i].id;
 
             succerror(
@@ -1196,7 +1196,7 @@ function question4() {
                 4
             );
 
-            // addCorrectAnswerQuestion4();
+            addCorrectAnswerQuestion4();
         }
     } else if (
         contentBasketTrue.length === 1 &&

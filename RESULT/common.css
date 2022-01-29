@@ -303,7 +303,10 @@ body {
     top: 40px;
 }
 
-.contentCorrectAnswer4,
+.contentCorrectAnswer4 {
+    top: 100px;
+}
+
 .contentCorrectAnswer3 {
     top: 160px;
 }
