@@ -59,72 +59,53 @@ function drop3(e) {
     orignalElement.id = currentId;
 }
 
-// 7 QUESTION
+// 4 QUESTION
 
 function drag4(e) {
     localStorage.setItem("idOrigin4question5class", e.target.id);
-    localStorage.setItem(
-        "classElemGrandparent4",
-        e.target.parentElement.className
-    );
-    localStorage.setItem("positionElem4", e.target.dataset.position);
-    localStorage.setItem("textElem4", e.target.dataset.text);
-    localStorage.setItem("classElem4", e.target.dataset.class);
 }
 
 function drop4(e) {
-    // получаем id несомого элемента и класс прародителя
-    let classElemGrandparent = localStorage.getItem("classElemGrandparent4");
-    let idTakenElement = localStorage.getItem("idOrigin4question5class");
-    let positionElem = localStorage.getItem("positionElem4");
-    let classElem = localStorage.getItem("classElem4");
-    let textElem = localStorage.getItem("textElem4");
-    let objectName = idTakenElement.slice(0, -1);
-
-    // берем id того элемента, на который положим несомый
-    let currentId = e.target.id;
+    // получаем id, позицию и класс текущего
+    let idOrig = localStorage.getItem("idOrigin4question5class");
+    let idCurn = e.target.id;
+    let classCurn = e.target.parentElement.className;
+    let positionOrig = idOrig.slice(0, -1).slice(-1) - 1;
 
     // получаем объекты
-    let orignalElem = document.getElementById(idTakenElement);
-    let currentElem = document.getElementById(currentId);
+    let orgnElement = document.getElementById(idOrig);
+    let crntElement = document.getElementById(idCurn);
 
-    // создаём новый объект
-    let objectBeingCreated = document.createElement("div");
-    objectBeingCreated.textContent = textElem;
-    objectBeingCreated.className = classElem;
-    objectBeingCreated.setAttribute("draggable", true);
-    objectBeingCreated.setAttribute("data-text", textElem);
-    objectBeingCreated.id = objectName;
-    objectBeingCreated.setAttribute("data-position", positionElem);
-    objectBeingCreated.alt = idTakenElement;
-    objectBeingCreated.style.cursor = "grab";
+    // копируем переносимый объект в новый
+    let copyObj = document.createElement("img");
+    copyObj.src = "./pictures/4que/" + idOrig.slice(0, -1) + ".svg";
+    copyObj.id = idOrig;
+    copyObj.style.cursor = "grab";
+    copyObj.style.marginTop = "10px";
+    copyObj.style.marginLeft = "10px";
 
-    // меняем поля местами
-    currentElem.appendChild(objectBeingCreated);
+    // очищаем оригинал
+    orgnElement.src = "";
+    orgnElement.id = "";
+    orgnElement.parentElement.style.cursor = "default";
 
-    if (
-        classElemGrandparent != "basket4first" ||
-        classElemGrandparent != "basket4second" ||
-        classElemGrandparent != "basket4third"
-    ) {
-        orignalElem.style.opacity = "0.5";
-        orignalElem.textContent = "";
-        orignalElem.style.cursor = "default";
-
-        orignalElem.id = "forClear";
+    if (orgnElement.parentElement.id === "") {
+        // вставляем переносимый объект в корзину
+        crntElement.appendChild(copyObj);
     }
 
+    // теперь делаем перенос обратно
     if (
-        classElemGrandparent == "basket4first" ||
-        classElemGrandparent == "basket4second" ||
-        classElemGrandparent == "basket4third"
+        orgnElement.parentElement.id === "firstBasket4" ||
+        orgnElement.parentElement.id === "secondBasket4" ||
+        orgnElement.parentElement.id === "thirdBasket4"
     ) {
-        e.target.style.opacity = "1";
-        e.target.textContent = textElem;
-        e.target.id = idTakenElement + "4";
-        e.target.style.cursor = "grab";
-
-        document.getElementById("forClear").remove();
+        let crnt =
+            document.getElementsByClassName(classCurn)[0].children[positionOrig]
+                .children[0];
+        crnt.id = idOrig;
+        crnt.src = "./pictures/4que/" + idOrig.slice(0, -1) + ".svg";
+        crnt.style.cursor = "grab";
     }
 }
 

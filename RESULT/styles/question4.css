@@ -95,9 +95,10 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 45px;
-    background: #369cb7;
-    border: 1px solid #369cb7;
+    width: 116px;
+    height: 70px;
+    background: #bad7de;
+    border: 1px solid #bad7de;
     box-sizing: border-box;
     border-radius: 5px;
 
@@ -111,8 +112,4 @@
     text-align: center;
     color: #ffffff;
     margin-right: 10px;
-}
-
-.expression4 {
-    width: 80px;
 }
