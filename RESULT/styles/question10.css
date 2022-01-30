@@ -45,3 +45,8 @@
     top: -113px;
     left: 35px;
 }
+
+.arrows10 img:nth-child(2) {
+    position: absolute;
+    top: 50px;
+}
