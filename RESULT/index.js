@@ -1483,62 +1483,73 @@ function question9() {
     }
 }
 
-// 10 QUESTION
+// ----------------------------------------------------------------------- 10 QUESTION -----------------------------------------------------------
 
-function question10() {
-    // получаем содежимое блоков
-    let firstInput10 =
-        document.getElementsByClassName("inputs10")[0].children[0].id;
-    let secondInput10 =
-        document.getElementsByClassName("inputs10")[0].children[1].id;
+dragElement(document.getElementsByClassName("leftArrow")[0]);
 
-    if (firstInput10 !== "firstEmpty10" && secondInput10 !== "secondEmpty10") {
-        // проверяем на верность для создания статуса
-        if (firstInput10 === "secondBtn10" && secondInput10 === "firstBtn10") {
-            addImage(
-                "success",
-                document.getElementsByClassName("question10"),
-                "app10",
-                10
-            );
-        } else {
-            if (firstInput10 !== "secondBtn10") {
-                document.getElementById(firstInput10).style.border =
-                    "2px solid #ED7777";
+const rotationFunction = new Propeller(
+    document.getElementsByClassName("leftArrow")[0],
+    {
+        inertia: 0,
+    }
+);
 
-                addMiniIcon(document.getElementById(firstInput10), "failure");
-            } else if (firstInput10 === "secondBtn10") {
-                document.getElementById(firstInput10).style.border =
-                    "2px solid #9DD765";
+function dragElement(element) {
+    let pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
 
-                addMiniIcon(document.getElementById(firstInput10), "success");
-            }
+    element.onmousedown = dragMouseDown;
 
-            if (secondInput10 !== "firstBtn10") {
-                document.getElementById(secondInput10).style.border =
-                    "2px solid #ED7777";
+    function dragMouseDown(e) {
+        e = e || window.event;
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
 
-                addMiniIcon(document.getElementById(secondInput10), "failure");
-            } else if (secondInput10 === "firstBtn10") {
-                document.getElementById(secondInput10).style.border =
-                    "2px solid #9DD765";
+    function elementDrag(e) {
+        e = e || window.event;
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        element.style.top = element.offsetTop - pos2 + "px";
+        element.style.left = element.offsetLeft - pos1 + "px";
+    }
 
-                addMiniIcon(document.getElementById(secondInput10), "success");
-            }
-
-            addImage(
-                "failure",
-                document.getElementsByClassName("question10"),
-                "app10",
-                10
-            );
-
-            // addCorrectAnswerQuestion10();
-        }
-    } else {
-        highlightingUnfillededBlocks(2, 10);
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
     }
 }
+
+document
+    .getElementsByClassName("leftArrow")[0]
+    .addEventListener("mousedown", (e) => {
+        if (
+            (e.target.className !== "leftEdge" ||
+                e.target.className !== "rightEdge") &&
+            e.target.className === "imgRuler"
+        ) {
+            rotationFunction.stop();
+            dragElement(document.getElementsByClassName("leftArrow")[0]);
+        }
+
+        if (
+            (e.target.className === "leftEdge" ||
+                e.target.className === "rightEdge") &&
+            e.target.className !== "imgRuler"
+        ) {
+            rotationFunction.onRotated(e);
+        }
+    });
+// -----------------------------------------------------------------------------------------------------------------------------------------------
 
 // 11 QUESTION
 
@@ -2082,7 +2093,7 @@ document.getElementById("submit").onclick = function () {
     question7();
     question8();
     question9();
-    // question10();
+    question10();
     question11();
     question12();
     question13();

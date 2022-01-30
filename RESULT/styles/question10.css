@@ -49,4 +49,41 @@
 .arrows10 img:nth-child(2) {
     position: absolute;
     top: 50px;
+    left: 165px;
+}
+
+/* leftArrow styles */
+
+.leftArrow {
+    position: absolute;
+    top: -51px;
+    display: flex;
+    left: 165px;
+    height: 100px;
+    width: 100px;
+}
+
+.imgRuler {
+    position: absolute;
+    margin-left: -330px;
+}
+
+.leftEdge,
+.rightEdge {
+    display: flex;
+    width: 50px;
+    height: 57px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.leftEdge {
+    top: 30px;
+    left: -170px;
+    z-index: 1;
+}
+
+.rightEdge {
+    top: 80px;
+    left: -41px;
 }
