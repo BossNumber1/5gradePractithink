@@ -153,7 +153,7 @@ body {
 }
 
 .correctAnswer10 {
-    top: 40px;
+    top: 200px;
 }
 
 .correctAnswer23 {
@@ -276,9 +276,12 @@ body {
     top: 140px;
 }
 
-.contentCorrectAnswer7,
-.contentCorrectAnswer10 {
+.contentCorrectAnswer7 {
     top: 60px;
+}
+
+.contentCorrectAnswer10 {
+    top: 120px;
 }
 
 .contentCorrectAnswer11,

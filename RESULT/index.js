@@ -270,12 +270,12 @@ function addCorrectAnswerQuestion9() {
 }
 
 function addCorrectAnswerQuestion10() {
-    document.getElementsByClassName("app10")[0].style.height = "550px";
+    document.getElementsByClassName("app10")[0].style.height = "800px";
     addCorrectAnswer(
         "correctAnswer10",
         "10que",
         "app10",
-        "contentCorrectAnswer"
+        "contentCorrectAnswer10"
     );
 }
 
@@ -1483,9 +1483,7 @@ function question9() {
     }
 }
 
-// ----------------------------------------------------------------------- 10 QUESTION -----------------------------------------------------------
-
-dragElement(document.getElementsByClassName("leftArrow")[0]);
+// 10 QUESTION
 
 const rotationFunction = new Propeller(
     document.getElementsByClassName("leftArrow")[0],
@@ -1493,6 +1491,8 @@ const rotationFunction = new Propeller(
         inertia: 0,
     }
 );
+
+dragElement(document.getElementsByClassName("leftArrow")[0]);
 
 function dragElement(element) {
     let pos1 = 0,
@@ -1549,7 +1549,69 @@ document
             rotationFunction.onRotated(e);
         }
     });
-// -----------------------------------------------------------------------------------------------------------------------------------------------
+
+// функция для определения угла наклона элемента
+function getDegreeElementByClass(class_element) {
+    let element = document.getElementsByClassName(class_element)[0];
+    let style = window.getComputedStyle(element, null);
+    // получаем значение стилей
+    let valueStyle =
+        style.getPropertyValue("-webkit-transform") ||
+        style.getPropertyValue("-moz-transform") ||
+        style.getPropertyValue("-ms-transform") ||
+        style.getPropertyValue("-o-transform") ||
+        style.getPropertyValue("transform");
+    // если стилей нет, то угол 0 градусов
+    if (valueStyle == "none") return 0;
+    // разбираем полученное значение
+    console.log(valueStyle);
+    let values = valueStyle.split("(")[1];
+    values = values.split(")")[0];
+    values = values.split(",");
+    // получаем синус и косинус
+    let cos = values[0];
+    let sin = values[1];
+    // вычисляем угол
+    let degree = Math.round(Math.asin(sin) * (180 / Math.PI));
+    if (cos < 0) {
+        addDegree = 90 - Math.round(Math.asin(sin) * (180 / Math.PI));
+        degree = 90 + addDegree;
+    }
+    if (degree < 0) {
+        degree = 360 + degree;
+    }
+    return degree;
+}
+
+function question10() {
+    let degree = getDegreeElementByClass("leftArrow");
+
+    if (degree !== 0) {
+        if (degree < 30 && degree > 28) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+        } else {
+            document.getElementsByClassName("content10")[0].style.border =
+                "1px solid #ED7777";
+
+            addImage(
+                "failure",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+
+            addCorrectAnswerQuestion10();
+        }
+    } else {
+        document.getElementsByClassName("content10")[0].style.border =
+            "1px solid #FFB47D";
+    }
+}
 
 // 11 QUESTION
 

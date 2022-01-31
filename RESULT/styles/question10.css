@@ -44,6 +44,8 @@
 .arrows10 {
     top: -113px;
     left: 35px;
+    height: 70px;
+    width: 335px;
 }
 
 .arrows10 img:nth-child(2) {
