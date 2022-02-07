@@ -65,7 +65,21 @@
     margin-bottom: 17.5px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+}
+
+.firstRow3 div,
+.secondRow3 div {
+    margin-right: 15px;
+}
+
+.rightColumn3 .secondRow3 div:nth-child(1) {
+    margin-right: 0;
+}
+
+.firstRow3 div:nth-child(1),
+.secondRow3 div:nth-child(1),
+.thirdRow3 div:nth-child(1) {
+    margin-left: 0;
 }
 
 /* bottom row styles */

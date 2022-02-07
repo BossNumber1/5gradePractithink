@@ -45,7 +45,6 @@
 
 .content1 input {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 6px 16px;
@@ -54,6 +53,15 @@
     box-sizing: border-box;
     border-radius: 5px;
     text-align: center;
-    margin-left: 8px;
+    margin-left: 20px;
     border: 1px solid;
+}
+
+#secondDiv1 input,
+#fourthDiv1 input {
+    margin-left: 27px;
+}
+
+.content1 img {
+    margin-left: 7px;
 }
